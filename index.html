@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://engenhan.com.br/" />
+
   <title>Engenhan - Engenharia Elétrica e Automação</title>
 
   <!-- SEO -->
@@ -10,7 +13,7 @@
   <meta name="keywords" content="engenharia elétrica, automação, projetos elétricos, eficiência energética, Engenhan" />
   <meta name="author" content="Engenhan" />
 
-  <!-- Open Graph (para redes sociais) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Engenhan - Engenharia Elétrica e Automação" />
   <meta property="og:description" content="Soluções em engenharia elétrica e automação com qualidade e inovação." />
   <meta property="og:image" content="https://engenhan.com.br/logo.png" />
@@ -18,7 +21,9 @@
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNJKBE93N"></script>
@@ -29,239 +34,118 @@
     gtag('config', 'G-QFNJKBE93N');
   </script>
 
-  <!-- Google Fonts -->
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Engenhan",
+    "url": "https://engenhan.com.br",
+    "logo": "https://engenhan.com.br/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-51-99999-9999",
+      "contactType": "customer service",
+      "email": "contato@engenhan.com.br"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
-
-  <style>
-    /* Reset básico */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #f9fafb;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #002e5d;
-      color: white;
-      padding: 15px 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    header img {
-      max-height: 50px;
-    }
-
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 22px;
-      margin-left: 15px;
-      flex-grow: 1;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 8px 15px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #005bbb;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 100px auto 40px; /* margin-top para header fixo */
-      padding: 0 20px;
-    }
-
-    section {
-      margin-bottom: 50px;
-    }
-
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #002e5d;
-      border-bottom: 3px solid #005bbb;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    /* Serviços em cards */
-    #servicos ul, #portfolio ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      list-style: none;
-      padding-left: 0;
-    }
-
-    #servicos li, #portfolio li {
-      background: white;
-      flex: 1 1 280px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    #servicos li:hover, #portfolio li:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-
-    /* Imagens do portfolio */
-    #portfolio img {
-      max-width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    /* Sobre e Contato texto */
-    #sobre p, #contato p {
-      max-width: 700px;
-      font-size: 1.1rem;
-      color: #444;
-    }
-
-    /* Links no contato */
-    #contato a {
-      color: #005bbb;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    #contato a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: #002e5d;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9rem;
-      margin-top: 60px;
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-      #servicos ul, #portfolio ul {
-        flex-direction: column;
-      }
-
-      header {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        gap: 10px;
-      }
-
-      header h1 {
-        margin-left: 0;
-        flex-basis: 100%;
-      }
-
-      nav {
-        justify-content: center;
-        flex-basis: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="Logotipo da Engenhan" />
-  <h1>Engenhan - Engenharia Elétrica e Automação</h1>
-  <nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#portfolio">Portfólio</a>
-    <a href="#contato">Contato</a>
-  </nav>
+<header role="banner">
+  <div class="container">
+    <img src="logo.png" alt="Logotipo da Engenhan" class="logo" />
+    <button id="menu-toggle" aria-label="Abrir menu">☰</button>
+    <h1>Engenhan</h1>
+    <nav id="menu" role="navigation">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<main>
+<main role="main" class="container">
   <section id="servicos">
     <h2>Serviços</h2>
-    <ul>
-      <li>Projetos de instalações elétricas residenciais e comerciais</li>
-      <li>Laudos técnicos e perícias</li>
-      <li>Consultoria em eficiência energética</li>
-      <li>Automação e controle industrial</li>
-    </ul>
+    <div class="cards">
+      <article>
+        <h3>Projetos Elétricos</h3>
+        <p>Instalações residenciais e comerciais com segurança e eficiência.</p>
+      </article>
+      <article>
+        <h3>Laudos Técnicos</h3>
+        <p>Emissão de laudos e perícias para certificação e inspeção.</p>
+      </article>
+      <article>
+        <h3>Eficiência Energética</h3>
+        <p>Consultorias para otimização do consumo e redução de custos.</p>
+      </article>
+      <article>
+        <h3>Automação Industrial</h3>
+        <p>Integração de sistemas e controle de processos automatizados.</p>
+      </article>
+    </div>
   </section>
 
   <section id="sobre">
     <h2>Sobre a Engenhan</h2>
-    <p>Somos uma empresa dedicada a fornecer soluções em engenharia elétrica e automação, com foco em qualidade e inovação. Nossa missão é entregar projetos confiáveis e eficientes para nossos clientes.</p>
+    <p>Somos especializados em soluções de engenharia elétrica e automação, com foco em qualidade, confiabilidade e inovação para nossos clientes.</p>
   </section>
 
   <section id="portfolio">
     <h2>Portfólio</h2>
-    <ul>
-      <li>
-        <img src="https://via.placeholder.com/400x160?text=Projeto+1" alt="Projeto 1 - Instalação residencial" />
-        <strong>Projeto 1:</strong> Instalação elétrica residencial moderna e eficiente.
-      </li>
-      <li>
-        <img src="https://via.placeholder.com/400x160?text=Projeto+2" alt="Projeto 2 - Automação industrial" />
-        <strong>Projeto 2:</strong> Automação e controle para linha de produção industrial.
-      </li>
-      <li>
-        <img src="https://via.placeholder.com/400x160?text=Projeto+3" alt="Projeto 3 - Laudo técnico" />
-        <strong>Projeto 3:</strong> Laudo técnico para inspeção e certificação elétrica.
-      </li>
-      <li>
-        <img src="https://via.placeholder.com/400x160?text=Projeto+4" alt="Projeto 4 - Consultoria energética" />
-        <strong>Projeto 4:</strong> Consultoria em eficiência energética para indústria.
-      </li>
-    </ul>
+    <div class="cards">
+      <article>
+        <img src="projeto1.jpg" alt="Instalação elétrica residencial moderna finalizada" />
+        <h3>Projeto 1</h3>
+        <p>Instalação elétrica residencial com foco em eficiência e estética.</p>
+      </article>
+      <article>
+        <img src="projeto2.jpg" alt="Sistema de automação industrial" />
+        <h3>Projeto 2</h3>
+        <p>Automação de linha de produção industrial de alta performance.</p>
+      </article>
+      <article>
+        <img src="projeto3.jpg" alt="Engenheiro realizando inspeção técnica" />
+        <h3>Projeto 3</h3>
+        <p>Laudo técnico para certificação de segurança elétrica.</p>
+      </article>
+      <article>
+        <img src="projeto4.jpg" alt="Consultoria energética para indústria" />
+        <h3>Projeto 4</h3>
+        <p>Consultoria para economia e eficiência energética em processos industriais.</p>
+      </article>
+    </div>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Email: <a href="mailto:contato@engenhan.com.br">contato@engenhan.com.br</a></p>
-    <p>Telefone: (51) 99999-9999</p>
-    <p>Endereço: Seu endereço residencial ou comercial</p>
+    <address>
+      <p>Email: <a href="mailto:contato@engenhan.com.br">contato@engenhan.com.br</a></p>
+      <p>Telefone: <a href="tel:+5551999999999">(51) 99999-9999</a></p>
+      <p>Endereço: Rua Exemplo, 123 - Porto Alegre/RS</p>
+    </address>
   </section>
 </main>
 
-<footer>
+<footer role="contentinfo">
   <p>© 2025 Engenhan - Todos os direitos reservados.</p>
 </footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+</script>
 
 </body>
 </html>
