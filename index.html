@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engenhan - Engenharia Elétrica</title>
-  
-  <!-- Aqui você pode ter outros meta tags -->
+  <title>Engenhan - Engenharia Elétrica e Automação</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- SEO -->
+  <meta name="description" content="Engenhan é especializada em engenharia elétrica e automação, oferecendo projetos, laudos, consultorias e mais." />
+  <meta name="keywords" content="engenharia elétrica, automação, projetos elétricos, eficiência energética, Engenhan" />
+  <meta name="author" content="Engenhan" />
+
+  <!-- Open Graph (para redes sociais) -->
+  <meta property="og:title" content="Engenhan - Engenharia Elétrica e Automação" />
+  <meta property="og:description" content="Soluções em engenharia elétrica e automação com qualidade e inovação." />
+  <meta property="og:image" content="https://engenhan.com.br/logo.png" />
+  <meta property="og:url" content="https://engenhan.com.br" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNJKBE93N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-QFNJKBE93N');
   </script>
-</head>
-  <link rel="icon" href="favicon.png" type="image/png">
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNJKBE93N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-QFNJKBE93N');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engenhan - Engenharia Elétrica</title>
   <style>
-    <meta name="description" content="Engenhan - Projetos e soluções em engenharia elétrica. Atuamos com laudos, instalações e consultoria técnica.">
-<meta name="keywords" content="engenharia elétrica, projetos elétricos, laudos técnicos, automação, eficiência energética, engenheiro eletricista, consultoria elétrica">
-<meta name="author" content="Engenhan Engenharia">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="Engenhan - Engenharia Elétrica">
-<meta property="og:description" content="Soluções em projetos, laudos e automação elétrica com qualidade e eficiência.">
-<meta property="og:image" content="https://SEU_USUARIO.github.io/SEU_REPOSITORIO/logo.png">
-<meta property="og:type" content="website">
     body {
       font-family: Arial, sans-serif;
       margin: 0; padding: 0;
@@ -54,9 +43,13 @@
       text-align: center;
     }
     header img {
-      height: 100px;
+      max-width: 120px;
       display: block;
       margin: 0 auto 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
     }
     nav {
       background: #0066cc;
@@ -86,13 +79,23 @@
       color: white;
       margin-top: 30px;
     }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      header h1 {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Logotipo da Engenhan" />
-  <h1>Engenhan - Engenharia Elétrica</h1>
+  <img src="logo.png" alt="Logotipo da Engenhan">
+  <h1>Engenhan - Engenharia Elétrica e Automação</h1>
 </header>
 
 <nav>
@@ -114,12 +117,12 @@
 
   <section id="sobre">
     <h2>Sobre a Engenhan</h2>
-    <p>Somos uma empresa dedicada a fornecer soluções em engenharia elétrica, com foco em qualidade e inovação. Nossa missão é entregar projetos confiáveis e eficientes para nossos clientes.</p>
+    <p>Somos uma empresa dedicada a fornecer soluções em engenharia elétrica e automação, com foco em qualidade e inovação. Nossa missão é entregar projetos confiáveis e eficientes para nossos clientes.</p>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Email: atendimento@engenhan.com.br</p>
+    <p>Email: <a href="mailto:contato@engenhan.com.br">contato@engenhan.com.br</a></p>
     <p>Telefone: (51) 99999-9999</p>
     <p>Endereço: Seu endereço residencial ou comercial</p>
   </section>
