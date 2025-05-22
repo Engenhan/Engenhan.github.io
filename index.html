@@ -149,7 +149,7 @@
     }
 
     /* Sobre e Contato texto */
-    #sobre p {
+    #sobre p, #contato p {
       max-width: 700px;
       font-size: 1.1rem;
       color: #444;
@@ -166,65 +166,6 @@
       text-decoration: underline;
     }
 
-    /* Formulário de contato */
-    form {
-      max-width: 600px;
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #002e5d;
-    }
-
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 10px 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-      resize: vertical;
-    }
-
-    form input[type="text"]:focus,
-    form input[type="email"]:focus,
-    form textarea:focus {
-      border-color: #005bbb;
-      outline: none;
-    }
-
-    form button {
-      background-color: #005bbb;
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-
-    form button:hover {
-      background-color: #003f8a;
-    }
-
-    /* Mensagem de sucesso/erro */
-    #form-message {
-      margin-top: 15px;
-      font-weight: 600;
-    }
-
-    /* Footer */
     footer {
       background: #002e5d;
       color: white;
@@ -312,66 +253,15 @@
 
   <section id="contato">
     <h2>Contato</h2>
-    <form id="contactForm" onsubmit="return enviarFormulario(event)">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui" required></textarea>
-
-      <button type="submit">Enviar</button>
-
-      <p id="form-message"></p>
-    </form>
+    <p>Email: <a href="mailto:contato@engenhan.com.br">contato@engenhan.com.br</a></p>
+    <p>Telefone: (51) 99999-9999</p>
+    <p>Endereço: Seu endereço residencial ou comercial</p>
   </section>
 </main>
 
 <footer>
   <p>© 2025 Engenhan - Todos os direitos reservados.</p>
 </footer>
-
-<script>
-  function enviarFormulario(event) {
-    event.preventDefault();
-
-    const nome = document.getElementById('nome').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mensagem = document.getElementById('mensagem').value.trim();
-    const formMessage = document.getElementById('form-message');
-
-    if (!nome || !email || !mensagem) {
-      formMessage.style.color = 'red';
-      formMessage.textContent = 'Por favor, preencha todos os campos.';
-      return false;
-    }
-
-    // Simples validação de email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      formMessage.style.color = 'red';
-      formMessage.textContent = 'Por favor, insira um email válido.';
-      return false;
-    }
-
-    // Montar corpo do email
-    const subject = encodeURIComponent('Contato pelo site Engenhan');
-    const body = encodeURIComponent(`Nome: ${nome}\nEmail: ${email}\n\nMensagem:\n${mensagem}`);
-
-    // Abrir cliente de email
-    window.location.href = `mailto:contato@engenhan.com.br?subject=${subject}&body=${body}`;
-
-    formMessage.style.color = 'green';
-    formMessage.textContent = 'Seu email está sendo preparado para envio.';
-
-    // Opcional: resetar o formulário após envio
-    // document.getElementById('contactForm').reset();
-
-    return false;
-  }
-</script>
 
 </body>
 </html>
