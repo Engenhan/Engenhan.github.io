@@ -29,64 +29,160 @@
     gtag('config', 'G-QFNJKBE93N');
   </script>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header img {
-      max-width: 120px;
-      display: block;
-      margin: 0 auto 10px;
-    }
-    header h1 {
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-size: 24px;
-    }
-    nav {
-      background: #0066cc;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #004080;
-      color: white;
-      margin-top: 30px;
+      padding: 0;
     }
 
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f9fafb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #002e5d;
+      color: white;
+      padding: 15px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      max-height: 50px;
+    }
+
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      margin-left: 15px;
+      flex-grow: 1;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #005bbb;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 100px auto 40px; /* margin-top para header fixo */
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #002e5d;
+      border-bottom: 3px solid #005bbb;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Serviços em cards */
+    #servicos ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    #servicos li {
+      background: white;
+      flex: 1 1 250px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    #servicos li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    /* Sobre e Contato texto */
+    #sobre p, #contato p {
+      max-width: 700px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Links no contato */
+    #contato a {
+      color: #005bbb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #contato a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #002e5d;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      #servicos ul {
+        flex-direction: column;
       }
+
+      header {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+      }
+
       header h1 {
-        font-size: 20px;
+        margin-left: 0;
+        flex-basis: 100%;
+      }
+
+      nav {
+        justify-content: center;
+        flex-basis: 100%;
       }
     }
   </style>
@@ -94,15 +190,14 @@
 <body>
 
 <header>
-  <img src="logo.png" alt="Logotipo da Engenhan">
+  <img src="logo.png" alt="Logotipo da Engenhan" />
   <h1>Engenhan - Engenharia Elétrica e Automação</h1>
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
 </header>
-
-<nav>
-  <a href="#servicos">Serviços</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#contato">Contato</a>
-</nav>
 
 <main>
   <section id="servicos">
