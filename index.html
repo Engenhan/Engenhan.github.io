@@ -342,4 +342,36 @@
     const mensagem = document.getElementById('mensagem').value.trim();
     const formMessage = document.getElementById('form-message');
 
-    if (!nome ||
+    if (!nome || !email || !mensagem) {
+      formMessage.style.color = 'red';
+      formMessage.textContent = 'Por favor, preencha todos os campos.';
+      return false;
+    }
+
+    // Simples validação de email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      formMessage.style.color = 'red';
+      formMessage.textContent = 'Por favor, insira um email válido.';
+      return false;
+    }
+
+    // Montar corpo do email
+    const subject = encodeURIComponent('Contato pelo site Engenhan');
+    const body = encodeURIComponent(`Nome: ${nome}\nEmail: ${email}\n\nMensagem:\n${mensagem}`);
+
+    // Abrir cliente de email
+    window.location.href = `mailto:contato@engenhan.com.br?subject=${subject}&body=${body}`;
+
+    formMessage.style.color = 'green';
+    formMessage.textContent = 'Seu email está sendo preparado para envio.';
+
+    // Opcional: resetar o formulário após envio
+    // document.getElementById('contactForm').reset();
+
+    return false;
+  }
+</script>
+
+</body>
+</html>
