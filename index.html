@@ -112,7 +112,7 @@
     }
 
     /* Serviços em cards */
-    #servicos ul {
+    #servicos ul, #portfolio ul {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
@@ -120,19 +120,32 @@
       padding-left: 0;
     }
 
-    #servicos li {
+    #servicos li, #portfolio li {
       background: white;
-      flex: 1 1 250px;
+      flex: 1 1 280px;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: default;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    #servicos li:hover {
+    #servicos li:hover, #portfolio li:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    /* Imagens do portfolio */
+    #portfolio img {
+      max-width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
     }
 
     /* Sobre e Contato texto */
@@ -164,7 +177,7 @@
 
     /* Responsividade */
     @media (max-width: 768px) {
-      #servicos ul {
+      #servicos ul, #portfolio ul {
         flex-direction: column;
       }
 
@@ -195,6 +208,7 @@
   <nav>
     <a href="#servicos">Serviços</a>
     <a href="#sobre">Sobre</a>
+    <a href="#portfolio">Portfólio</a>
     <a href="#contato">Contato</a>
   </nav>
 </header>
@@ -213,6 +227,28 @@
   <section id="sobre">
     <h2>Sobre a Engenhan</h2>
     <p>Somos uma empresa dedicada a fornecer soluções em engenharia elétrica e automação, com foco em qualidade e inovação. Nossa missão é entregar projetos confiáveis e eficientes para nossos clientes.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfólio</h2>
+    <ul>
+      <li>
+        <img src="https://via.placeholder.com/400x160?text=Projeto+1" alt="Projeto 1 - Instalação residencial" />
+        <strong>Projeto 1:</strong> Instalação elétrica residencial moderna e eficiente.
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/400x160?text=Projeto+2" alt="Projeto 2 - Automação industrial" />
+        <strong>Projeto 2:</strong> Automação e controle para linha de produção industrial.
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/400x160?text=Projeto+3" alt="Projeto 3 - Laudo técnico" />
+        <strong>Projeto 3:</strong> Laudo técnico para inspeção e certificação elétrica.
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/400x160?text=Projeto+4" alt="Projeto 4 - Consultoria energética" />
+        <strong>Projeto 4:</strong> Consultoria em eficiência energética para indústria.
+      </li>
+    </ul>
   </section>
 
   <section id="contato">
