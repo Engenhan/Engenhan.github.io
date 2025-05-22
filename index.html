@@ -10,7 +10,7 @@
   <meta name="keywords" content="engenharia elétrica, automação, projetos elétricos, eficiência energética, Engenhan" />
   <meta name="author" content="Engenhan" />
 
-  <!-- Open Graph (para redes sociais) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Engenhan - Engenharia Elétrica e Automação" />
   <meta property="og:description" content="Soluções em engenharia elétrica e automação com qualidade e inovação." />
   <meta property="og:image" content="https://engenhan.com.br/logo.png" />
@@ -18,7 +18,7 @@
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.png" type="image/png" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNJKBE93N"></script>
@@ -34,7 +34,7 @@
 
   <style>
     /* Reset básico */
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -45,6 +45,19 @@
       background: #f9fafb;
       color: #222;
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #005bbb;
+      outline-offset: 2px;
     }
 
     header {
@@ -53,12 +66,13 @@
       width: 100%;
       background: #002e5d;
       color: white;
-      padding: 15px 20px;
+      padding: 10px 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     header img {
@@ -76,25 +90,31 @@
     nav {
       display: flex;
       gap: 20px;
+      align-items: center;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
       font-weight: 600;
       padding: 8px 15px;
       border-radius: 5px;
       transition: background-color 0.3s ease;
+      color: white;
     }
 
-    nav a:hover {
+    nav a:hover, nav a:focus {
       background-color: #005bbb;
+    }
+
+    nav a.active {
+      background-color: #004080;
+      cursor: default;
     }
 
     main {
       max-width: 1000px;
-      margin: 100px auto 40px; /* margin-top para header fixo */
+      margin: 100px auto 40px; /* margem superior para o header fixo */
       padding: 0 20px;
+      flex-grow: 1;
     }
 
     section {
@@ -111,7 +131,7 @@
       padding-bottom: 5px;
     }
 
-    /* Serviços em cards */
+    /* Lista de serviços e portfólio como cards */
     #servicos ul, #portfolio ul {
       display: flex;
       flex-wrap: wrap;
@@ -148,22 +168,24 @@
       margin-bottom: 15px;
     }
 
-    /* Sobre e Contato texto */
+    /* Texto no Sobre e Contato */
     #sobre p, #contato p {
       max-width: 700px;
       font-size: 1.1rem;
       color: #444;
+      line-height: 1.5;
     }
 
     /* Links no contato */
     #contato a {
       color: #005bbb;
-      text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    #contato a:hover {
+    #contato a:hover, #contato a:focus {
       text-decoration: underline;
+      color: #003a75;
     }
 
     footer {
@@ -172,7 +194,7 @@
       text-align: center;
       padding: 20px 10px;
       font-size: 0.9rem;
-      margin-top: 60px;
+      margin-top: auto;
     }
 
     /* Responsividade */
@@ -182,31 +204,31 @@
       }
 
       header {
-        flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        gap: 10px;
       }
 
       header h1 {
-        margin-left: 0;
+        margin: 10px 0 10px 0;
         flex-basis: 100%;
       }
 
       nav {
-        justify-content: center;
         flex-basis: 100%;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
       }
     }
   </style>
 </head>
 <body>
 
-<header>
+<header role="banner">
   <img src="logo.png" alt="Logotipo da Engenhan" />
   <h1>Engenhan - Engenharia Elétrica e Automação</h1>
-  <nav>
-    <a href="#servicos">Serviços</a>
+  <nav role="navigation" aria-label="Menu principal">
+    <a href="#servicos" class="active">Serviços</a>
     <a href="#sobre">Sobre</a>
     <a href="#portfolio">Portfólio</a>
     <a href="#contato">Contato</a>
@@ -214,7 +236,7 @@
 </header>
 
 <main>
-  <section id="servicos">
+  <section id="servicos" tabindex="-1">
     <h2>Serviços</h2>
     <ul>
       <li>Projetos de instalações elétricas residenciais e comerciais</li>
@@ -224,16 +246,16 @@
     </ul>
   </section>
 
-  <section id="sobre">
+  <section id="sobre" tabindex="-1">
     <h2>Sobre a Engenhan</h2>
     <p>Somos uma empresa dedicada a fornecer soluções em engenharia elétrica e automação, com foco em qualidade e inovação. Nossa missão é entregar projetos confiáveis e eficientes para nossos clientes.</p>
   </section>
 
-  <section id="portfolio">
+  <section id="portfolio" tabindex="-1">
     <h2>Portfólio</h2>
     <ul>
       <li>
-        <img src="https://via.placeholder.com/400x160?text=Projeto+1" alt="Projeto 1 - Instalação residencial" />
+        <img src="projeto1_real.PNG" alt="Projeto 1 - Instalação residencial moderna e eficiente" />
         <strong>Projeto 1:</strong> Instalação elétrica residencial moderna e eficiente.
       </li>
       <li>
@@ -251,7 +273,7 @@
     </ul>
   </section>
 
-  <section id="contato">
+  <section id="contato" tabindex="-1">
     <h2>Contato</h2>
     <p>Email: <a href="mailto:contato@engenhan.com.br">contato@engenhan.com.br</a></p>
     <p>Telefone: (51) 99999-9999</p>
@@ -259,7 +281,7 @@
   </section>
 </main>
 
-<footer>
+<footer role="contentinfo">
   <p>© 2025 Engenhan - Todos os direitos reservados.</p>
 </footer>
 
