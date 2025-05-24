@@ -4,25 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Engenhan - Projetos Elétricos e Automação Industrial | Porto Alegre</title>
-
-  <!-- SEO Otimizado -->
   <meta name="description" content="Projetos elétricos, automação industrial e eficiência energética em Porto Alegre. Soluções personalizadas em engenharia elétrica residencial, comercial e industrial." />
   <meta name="keywords" content="projetos elétricos, automação industrial, eficiência energética, engenharia elétrica Porto Alegre, laudos técnicos, Engenhan" />
   <meta name="author" content="Engenhan" />
   <link rel="canonical" href="https://engenhan.com.br" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Engenhan - Soluções em Engenharia Elétrica e Automação" />
   <meta property="og:description" content="Projetos elétricos personalizados e automação industrial em Porto Alegre. Qualidade técnica e soluções energéticas inteligentes." />
   <meta property="og:image" content="https://engenhan.com.br/logo-social.png" />
   <meta property="og:url" content="https://engenhan.com.br" />
   <meta property="og:type" content="website" />
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNJKBE93N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,17 +22,13 @@
     gtag('js', new Date());
     gtag('config', 'G-QFNJKBE93N');
   </script>
-
-  <!-- Google Fonts com preload -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" as="style" onload="this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" /></noscript>
-
-  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Engenhan Engenharia Elétrica e Automoação",
+    "name": "Engenhan",
     "url": "https://engenhan.com.br",
     "logo": "https://engenhan.com.br/logo.png",
     "image": "https://engenhan.com.br/cover.jpg",
@@ -64,8 +52,6 @@
     "description": "Especializada em projetos elétricos, automação industrial e eficiência energética para residências, comércios e indústrias."
   }
   </script>
-
-  <!-- Meta para tema em navegadores móveis -->
   <meta name="theme-color" content="#002e5d" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -252,60 +238,104 @@
       z-index: 1;
     }
 
-    /* Seção de Portfólio */
-    #portfolio ul {
+    /* Seção de Portfólio - NOVA GALERIA */
+    .portfolio-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 30px;
-      list-style: none;
+      margin-top: 40px;
     }
 
-    #portfolio li {
+    .project-card {
       background: white;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .project-image {
+      position: relative;
+      height: 250px;
       overflow: hidden;
     }
 
-    #portfolio li:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-
-    #portfolio img {
+    .project-image img {
       width: 100%;
-      height: 200px;
+      height: 100%;
       object-fit: cover;
-      object-position: center;
-      border-bottom: 3px solid #005bbb;
+      transition: transform 0.5s ease;
     }
 
-    .portfolio-info {
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,46,93,0.8), transparent);
+      color: white;
+      padding: 20px;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+
+    .project-overlay h4 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .view-project {
+      background: #005bbb;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .view-project:hover {
+      background: #003d7a;
+    }
+
+    .project-info {
       padding: 20px;
     }
 
-    .portfolio-info strong {
-      display: block;
-      font-family: 'Montserrat', sans-serif;
+    .project-info h4 {
       color: #002e5d;
       margin-bottom: 10px;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
-    .portfolio-info a {
-      color: #005bbb;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
+    .project-info p {
+      color: #555;
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    .project-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .project-details span {
+      background: #f0f4f8;
+      padding: 5px 10px;
+      border-radius: 5px;
       display: inline-block;
-      margin-top: 10px;
-      transition: all 0.2s ease;
-    }
-
-    .portfolio-info a:hover {
-      color: #002e5d;
-      text-decoration: underline;
     }
 
     /* Seção Sobre */
@@ -494,6 +524,14 @@
         width: 50px;
         height: 50px;
       }
+
+      .portfolio-gallery {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-image {
+        height: 200px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -501,7 +539,7 @@
         font-size: 1.6rem;
       }
 
-      #servicos ul, #portfolio ul {
+      #servicos ul {
         grid-template-columns: 1fr;
       }
 
@@ -561,48 +599,100 @@
     <section id="sobre">
       <h2>Sobre Nós</h2>
       <p>A Engenhan é uma empresa especializada em engenharia elétrica e automação industrial, com sede em Porto Alegre/RS. Combinamos conhecimento técnico avançado com soluções práticas para atender residências, comércios e indústrias.</p>
-      <p>Nossa equipe possui mais de 10 anos de experiência no mercado, com certificações em:</p>
+      <p>Nossa equipe possui mais de 15 anos de experiência no mercado, com certificações em:</p>
       <ul style="margin: 15px 0 15px 20px; color: #444;">
         <li>NR-10 - Segurança em Instalações Elétricas</li>
-        <li>Automação Industrial - Siemens </li>
-        <li>Projetos de Eficiência Energética </li>
+        <li>Automação Industrial - Siemens e Rockwell</li>
+        <li>Projetos de Eficiência Energética - PROCEL</li>
       </ul>
       <p>Valorizamos a transparência, o atendimento personalizado e a entrega de resultados mensuráveis para nossos clientes.</p>
     </section>
 
+    <!-- NOVA SEÇÃO DE PORTFÓLIO COM GALERIA -->
     <section id="portfolio">
       <h2>Portfólio</h2>
-      <h3>Alguns de nossos projetos recentes</h3>
+      <h3>Conheça nossos projetos realizados</h3>
       
-      <ul>
-        <li>
-          <img src="projeto1.jpg" alt="Projeto elétrico completo para edifício residencial de alto padrão em Porto Alegre" loading="lazy" width="400" height="200" />
-          <div class="portfolio-info">
-            <strong>Residencial Alto Padrão</strong>
-            <p>Projeto elétrico completo com sistema de automação residencial integrado.</p>
-            <a href="#detalhes-projeto1">Ver detalhes →</a>
+      <div class="portfolio-gallery">
+        <!-- Projeto 1 - Substitua a imagem e texto -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="projeto-residencial.jpg" alt="Instalação elétrica residencial" loading="lazy">
+            <div class="project-overlay">
+              <h4>Residencial</h4>
+              <button class="view-project">Ver detalhes</button>
+            </div>
           </div>
-        </li>
-        <li>
-          <img src="projeto2.jpg" alt="Sistema de automação para linha de produção industrial em Esteio/RS" loading="lazy" width="400" height="200" />
-          <div class="portfolio-info">
-            <strong>Automação Industrial</strong>
-            <p>Modernização de linha de produção com redução de 25% no tempo de ciclo.</p>
-            <a href="#detalhes-projeto2">Ver estudo de caso →</a>
+          <div class="project-info">
+            <h4>Instalação Residencial</h4>
+            <p>Projeto completo com padrão de excelência em condomínio de luxo.</p>
+            <div class="project-details">
+              <span><strong>Área:</strong> 320m²</span>
+              <span><strong>Tempo:</strong> 3 semanas</span>
+            </div>
           </div>
-        </li>
-        <li>
-          <img src="projeto3.jpg" alt="Consultoria em eficiência energética para shopping center em Canoas" loading="lazy" width="400" height="200" />
-          <div class="portfolio-info">
-            <strong>Eficiência Energética</strong>
-            <p>Redução de 32% no consumo energético anual através de otimizações.</p>
-            <a href="#detalhes-projeto3">Ver resultados →</a>
-          </div>
-        </li>
-      </ul>
+        </div>
 
-      <div style="text-align: center; margin-top: 30px;">
-        <a href="#contato" class="cta-button secondary">Fale sobre seu projeto</a>
+        <!-- Projeto 2 - Substitua a imagem e texto -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="projeto-industrial.jpg" alt="Automação industrial" loading="lazy">
+            <div class="project-overlay">
+              <h4>Industrial</h4>
+              <button class="view-project">Ver detalhes</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Automação Industrial</h4>
+            <p>Modernização de linha de produção com redução de 25% no tempo.</p>
+            <div class="project-details">
+              <span><strong>Cliente:</strong> Indústria Metalúrgica</span>
+              <span><strong>Local:</strong> Canoas/RS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 3 - Substitua a imagem e texto -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="projeto-eficiencia.jpg" alt="Eficiência energética" loading="lazy">
+            <div class="project-overlay">
+              <h4>Eficiência</h4>
+              <button class="view-project">Ver detalhes</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Eficiência Energética</h4>
+            <p>Redução de 32% no consumo energético através de otimizações.</p>
+            <div class="project-details">
+              <span><strong>Economia:</strong> R$ 8.200/mês</span>
+              <span><strong>Retorno:</strong> 14 meses</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 4 - Substitua a imagem e texto -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="projeto-laudo.jpg" alt="Laudo técnico" loading="lazy">
+            <div class="project-overlay">
+              <h4>Laudo Técnico</h4>
+              <button class="view-project">Ver detalhes</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Laudo Técnico</h4>
+            <p>Regularização de instalações elétricas para shopping center.</p>
+            <div class="project-details">
+              <span><strong>Área:</strong> 12.000m²</span>
+              <span><strong>Normas:</strong> NR10 e ABNT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#contato" class="cta-button secondary">Quero um projeto como esses</a>
       </div>
     </section>
 
@@ -628,7 +718,9 @@
         <div>
           <div class="contato-info">
             <h3>Endereço</h3>
-           <p>Porto Alegre/RS</p>
+            <p>Av. Exemplo, 123 - Sala 501</p>
+            <p>Bairro Centro - Porto Alegre/RS</p>
+            <p>CEP: 90000-000</p>
           </div>
           
           <div style="margin-top: 20px;">
