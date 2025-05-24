@@ -1,776 +1,1375 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Engenhan - Projetos Elétricos e Automação Industrial | Porto Alegre</title>
+
+
+
+  <!-- SEO Otimizado -->
+
   <meta name="description" content="Projetos elétricos, automação industrial e eficiência energética em Porto Alegre. Soluções personalizadas em engenharia elétrica residencial, comercial e industrial." />
+
   <meta name="keywords" content="projetos elétricos, automação industrial, eficiência energética, engenharia elétrica Porto Alegre, laudos técnicos, Engenhan" />
+
   <meta name="author" content="Engenhan" />
+
   <link rel="canonical" href="https://engenhan.com.br" />
+
+
+
+  <!-- Open Graph -->
+
   <meta property="og:title" content="Engenhan - Soluções em Engenharia Elétrica e Automação" />
+
   <meta property="og:description" content="Projetos elétricos personalizados e automação industrial em Porto Alegre. Qualidade técnica e soluções energéticas inteligentes." />
+
   <meta property="og:image" content="https://engenhan.com.br/logo-social.png" />
+
   <meta property="og:url" content="https://engenhan.com.br" />
+
   <meta property="og:type" content="website" />
+
+
+
+  <!-- Favicon -->
+
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+
+  <!-- Google Analytics -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNJKBE93N"></script>
+
   <script>
+
     window.dataLayer = window.dataLayer || [];
+
     function gtag(){dataLayer.push(arguments);}
+
     gtag('js', new Date());
+
     gtag('config', 'G-QFNJKBE93N');
+
   </script>
+
+
+
+  <!-- Google Fonts com preload -->
+
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" as="style" onload="this.rel='stylesheet'" />
+
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" /></noscript>
+
+
+
+  <!-- JSON-LD Structured Data -->
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "LocalBusiness",
+
+
     "name": "Engenhan",
+
+
+    "name": "Engenhan Engenharia Elétrica e Automoação",
+
     "url": "https://engenhan.com.br",
+
     "logo": "https://engenhan.com.br/logo.png",
+
     "image": "https://engenhan.com.br/cover.jpg",
+
     "email": "atendimento@engenhan.com.br",
+
     "telephone": "+55-51-98153-2804",
+
     "address": {
+
       "@type": "PostalAddress",
+
       "streetAddress": "Av. Exemplo, 123",
+
       "addressLocality": "Porto Alegre",
+
       "addressRegion": "RS",
+
       "postalCode": "90000-000",
+
       "addressCountry": "BR"
+
     },
+
     "openingHoursSpecification": {
+
       "@type": "OpeningHoursSpecification",
+
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+
       "opens": "08:00",
+
       "closes": "18:00"
+
     },
+
     "priceRange": "$$",
+
     "description": "Especializada em projetos elétricos, automação industrial e eficiência energética para residências, comércios e indústrias."
+
   }
+
   </script>
+
+
+
+  <!-- Meta para tema em navegadores móveis -->
+
   <meta name="theme-color" content="#002e5d" />
+
   <meta name="apple-mobile-web-app-capable" content="yes" />
+
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+
+
   <style>
+
     /* Reset e Base */
+
     * {
+
       box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
     }
+
+
 
     html {
+
       scroll-behavior: smooth;
+
       font-size: 16px;
+
     }
+
+
 
     body {
+
       font-family: 'Roboto', sans-serif;
+
       background: #f9fafb;
+
       color: #222;
+
       line-height: 1.6;
+
       -webkit-font-smoothing: antialiased;
+
     }
+
+
 
     /* Acessibilidade */
+
     .skip-link {
+
       position: absolute;
+
       left: -9999px;
+
       top: 0;
+
       background: #002e5d;
+
       color: white;
+
       padding: 10px;
+
       z-index: 1001;
+
     }
+
     .skip-link:focus {
+
       left: 10px;
+
     }
+
+
 
     /* Cabeçalho */
+
     header {
+
       position: fixed;
+
       top: 0;
+
       width: 100%;
+
       background: #002e5d;
+
       color: white;
+
       padding: 15px 20px;
+
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+
       z-index: 1000;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       flex-wrap: wrap;
+
     }
+
+
 
     header img {
+
       height: 80px;
+
       width: auto;
+
       transition: transform 0.3s ease;
+
     }
+
+
 
     header img:hover {
+
       transform: scale(1.05);
+
     }
+
+
 
     .logo-container {
+
       display: flex;
+
       align-items: center;
+
       gap: 15px;
+
     }
+
+
 
     header h1 {
+
       font-family: 'Montserrat', sans-serif;
+
       font-weight: 700;
+
       font-size: 1.4rem;
+
       color: white;
+
     }
+
+
 
     nav {
+
       display: flex;
+
       gap: 15px;
+
       flex-wrap: wrap;
+
     }
+
+
 
     nav a {
+
       color: white;
+
       text-decoration: none;
+
       font-weight: 600;
+
       padding: 10px 15px;
+
       border-radius: 5px;
+
       transition: all 0.3s ease;
+
       font-size: 0.95rem;
+
     }
+
+
 
     nav a:hover, nav a:focus {
+
       background-color: #005bbb;
+
       transform: translateY(-2px);
+
     }
+
+
 
     /* Conteúdo Principal */
+
     main {
+
       max-width: 1200px;
+
       margin: 120px auto 40px;
+
       padding: 0 20px;
+
     }
+
+
 
     section {
+
       margin-bottom: 60px;
+
       scroll-margin-top: 100px;
+
     }
+
+
 
     h2 {
+
       font-family: 'Montserrat', sans-serif;
+
       font-weight: 700;
+
       font-size: 2rem;
+
       margin-bottom: 25px;
+
       color: #002e5d;
+
       position: relative;
+
       padding-bottom: 10px;
+
     }
+
+
 
     h2::after {
+
       content: '';
+
       position: absolute;
+
       bottom: 0;
+
       left: 0;
+
       width: 70px;
+
       height: 4px;
+
       background: #005bbb;
+
       border-radius: 2px;
+
     }
+
+
 
     h3 {
+
       font-family: 'Montserrat', sans-serif;
+
       font-weight: 600;
+
       color: #333;
+
       margin-bottom: 20px;
+
       font-size: 1.3rem;
+
     }
+
+
 
     /* Seção de Serviços */
+
     #servicos ul {
+
       display: grid;
+
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
       gap: 25px;
+
       list-style: none;
+
     }
+
+
 
     #servicos li {
+
       background: white;
+
       padding: 25px;
+
       border-radius: 10px;
+
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
       transition: all 0.3s ease;
+
       border-left: 4px solid #005bbb;
+
       position: relative;
+
       overflow: hidden;
+
     }
+
+
 
     #servicos li::before {
+
       content: '';
+
       position: absolute;
+
       top: 0;
+
       left: 0;
+
       width: 100%;
+
       height: 100%;
+
       background: linear-gradient(135deg, rgba(0,46,93,0.1) 0%, rgba(0,91,187,0.05) 100%);
+
       z-index: 0;
+
     }
+
+
 
     #servicos li:hover {
+
       transform: translateY(-5px);
+
       box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+
     }
+
+
 
     #servicos li strong {
+
       display: block;
+
       font-family: 'Montserrat', sans-serif;
+
       font-weight: 600;
+
       color: #002e5d;
+
       margin-bottom: 10px;
+
       font-size: 1.1rem;
+
       position: relative;
+
       z-index: 1;
+
     }
 
-    /* Seção de Portfólio - NOVA GALERIA */
-    .portfolio-gallery {
+
+
+    /* Seção de Portfólio */
+
+    #portfolio ul {
+
       display: grid;
+
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
       gap: 30px;
-      margin-top: 40px;
+
+      list-style: none;
+
     }
 
-    .project-card {
+
+
+    #portfolio li {
+
       background: white;
+
       border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
 
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
-    .project-image {
-      position: relative;
-      height: 250px;
-      overflow: hidden;
-    }
-
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .project-card:hover .project-image img {
-      transform: scale(1.05);
-    }
-
-    .project-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0,46,93,0.8), transparent);
-      color: white;
-      padding: 20px;
-      opacity: 1;
       transition: all 0.3s ease;
+
+      overflow: hidden;
+
     }
 
-    .project-overlay h4 {
-      margin-bottom: 10px;
-      font-size: 1.3rem;
+
+
+    #portfolio li:hover {
+
+      transform: translateY(-5px);
+
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+
     }
 
-    .view-project {
-      background: #005bbb;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s ease;
+
+
+    #portfolio img {
+
+      width: 100%;
+
+      height: 200px;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      border-bottom: 3px solid #005bbb;
+
     }
 
-    .view-project:hover {
-      background: #003d7a;
-    }
 
-    .project-info {
+
+    .portfolio-info {
+
       padding: 20px;
+
     }
 
-    .project-info h4 {
+
+
+    .portfolio-info strong {
+
+      display: block;
+
+      font-family: 'Montserrat', sans-serif;
+
       color: #002e5d;
+
       margin-bottom: 10px;
-      font-size: 1.2rem;
+
+      font-size: 1.1rem;
+
     }
 
-    .project-info p {
-      color: #555;
-      margin-bottom: 15px;
-      font-size: 0.95rem;
-    }
 
-    .project-details {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 0.85rem;
-    }
 
-    .project-details span {
-      background: #f0f4f8;
-      padding: 5px 10px;
-      border-radius: 5px;
+    .portfolio-info a {
+
+      color: #005bbb;
+
+      text-decoration: none;
+
+      font-weight: 500;
+
+      font-size: 0.9rem;
+
       display: inline-block;
+
+      margin-top: 10px;
+
+      transition: all 0.2s ease;
+
     }
+
+
+
+    .portfolio-info a:hover {
+
+      color: #002e5d;
+
+      text-decoration: underline;
+
+    }
+
+
 
     /* Seção Sobre */
+
     #sobre p {
+
       max-width: 700px;
+
       font-size: 1.1rem;
+
       color: #444;
+
       line-height: 1.8;
+
       margin-bottom: 20px;
+
     }
+
+
 
     /* Seção Contato */
+
     #contato {
+
       background: #f0f4f8;
+
       padding: 40px;
+
       border-radius: 10px;
+
     }
+
+
 
     .contato-grid {
+
       display: grid;
+
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
       gap: 30px;
+
       margin-top: 30px;
+
     }
+
+
 
     .contato-info {
+
       margin-bottom: 20px;
+
     }
+
+
 
     .contato-info p {
+
       margin-bottom: 5px;
+
     }
+
+
 
     .contato-info a {
+
       color: #005bbb;
+
       text-decoration: none;
+
       font-weight: 500;
+
       transition: all 0.2s ease;
+
     }
+
+
 
     .contato-info a:hover {
+
       color: #002e5d;
+
       text-decoration: underline;
+
     }
+
+
 
     /* Botões CTA */
+
     .cta-button {
+
       background: #005bbb;
+
       color: white;
+
       padding: 12px 25px;
+
       border-radius: 5px;
+
       font-weight: 600;
+
       display: inline-block;
+
       text-decoration: none;
+
       transition: all 0.3s ease;
+
       border: 2px solid transparent;
+
       text-align: center;
+
       font-family: 'Montserrat', sans-serif;
+
     }
+
+
 
     .cta-button:hover {
+
       background: #002e5d;
+
       transform: translateY(-2px);
+
       box-shadow: 0 4px 12px rgba(0,91,187,0.2);
+
     }
+
+
 
     .cta-button.secondary {
+
       background: transparent;
+
       color: #005bbb;
+
       border-color: #005bbb;
+
     }
+
+
 
     .cta-button.secondary:hover {
+
       background: rgba(0,91,187,0.1);
+
     }
+
+
 
     /* Rodapé */
+
     footer {
+
       background: #002e5d;
+
       color: white;
+
       padding: 40px 20px;
+
       font-size: 0.95rem;
+
     }
+
+
 
     .footer-content {
+
       max-width: 1200px;
+
       margin: 0 auto;
+
       display: grid;
+
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
       gap: 30px;
+
       text-align: left;
+
     }
+
+
 
     .footer-column h3 {
+
       color: white;
+
       font-size: 1.1rem;
+
       margin-bottom: 15px;
+
       font-family: 'Montserrat', sans-serif;
+
     }
+
+
 
     .footer-column ul {
+
       list-style: none;
+
     }
+
+
 
     .footer-column li {
+
       margin-bottom: 8px;
+
     }
+
+
 
     .footer-column a {
+
       color: #cbd5e0;
+
       text-decoration: none;
+
       transition: all 0.2s ease;
+
     }
+
+
 
     .footer-column a:hover {
+
       color: white;
+
       text-decoration: underline;
+
     }
+
+
 
     .copyright {
+
       text-align: center;
+
       margin-top: 40px;
+
       padding-top: 20px;
+
       border-top: 1px solid rgba(255,255,255,0.1);
+
       color: #cbd5e0;
+
       font-size: 0.85rem;
+
     }
+
+
 
     /* WhatsApp Fixo */
+
     .whatsapp-float {
+
       position: fixed;
+
       bottom: 30px;
+
       right: 30px;
+
       background-color: #25d366;
+
       border-radius: 50%;
+
       width: 60px;
+
       height: 60px;
+
       display: flex;
+
       justify-content: center;
+
       align-items: center;
+
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
       z-index: 10000;
+
       text-decoration: none;
+
       transition: all 0.3s ease;
+
     }
+
+
 
     .whatsapp-float:hover {
+
       transform: scale(1.1);
+
       box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+
     }
+
+
 
     .whatsapp-float svg {
+
       width: 32px;
+
       height: 32px;
+
       fill: white;
+
     }
+
+
 
     /* Responsividade */
+
     @media (max-width: 768px) {
+
       header {
+
         flex-direction: column;
+
         text-align: center;
+
         gap: 15px;
+
         padding: 15px 10px;
+
       }
+
+
 
       .logo-container {
+
         flex-direction: column;
+
       }
+
+
 
       nav {
+
         justify-content: center;
+
       }
+
+
 
       main {
+
         margin-top: 150px;
+
       }
+
+
 
       #contato {
+
         padding: 25px;
+
       }
+
+
 
       .whatsapp-float {
+
         bottom: 20px;
+
         right: 20px;
+
         width: 50px;
+
         height: 50px;
+
       }
 
-      .portfolio-gallery {
-        grid-template-columns: 1fr;
-      }
-      
-      .project-image {
-        height: 200px;
-      }
     }
+
+
 
     @media (max-width: 480px) {
+
       h2 {
+
         font-size: 1.6rem;
+
       }
 
-      #servicos ul {
+
+
+      #servicos ul, #portfolio ul {
+
         grid-template-columns: 1fr;
+
       }
+
+
 
       .footer-content {
+
         grid-template-columns: 1fr;
+
         gap: 20px;
+
       }
+
     }
+
   </style>
+
 </head>
 
+
+
 <body>
+
   <a href="#main" class="skip-link">Ir para conteúdo</a>
 
+
+
   <header>
+
     <div class="logo-container">
+
       <img src="logo.png" alt="Engenhan - Engenharia Elétrica e Automação" width="160" height="80" />
+
       <h1>Engenhan</h1>
+
     </div>
+
     <nav>
+
       <a href="#servicos">Serviços</a>
+
       <a href="#sobre">Sobre</a>
+
       <a href="#portfolio">Portfólio</a>
+
       <a href="#contato">Contato</a>
+
     </nav>
+
   </header>
 
+
+
   <main id="main">
+
     <section id="servicos">
+
       <h2>Nossos Serviços</h2>
+
       <h3>Soluções técnicas personalizadas para seu projeto</h3>
-      
+
+
+
       <ul>
+
         <li>
+
           <strong>Projetos Elétricos</strong>
+
           <p>Residenciais, comerciais e industriais com padrão de excelência e atendimento às normas técnicas.</p>
+
         </li>
+
         <li>
+
           <strong>Automação Industrial</strong>
+
           <p>Sistemas de controle e monitoramento para aumentar produtividade e reduzir custos operacionais.</p>
+
         </li>
+
         <li>
+
           <strong>Eficiência Energética</strong>
+
           <p>Diagnósticos e soluções para redução de consumo energético em até 40%.</p>
+
         </li>
+
         <li>
+
           <strong>Laudos Técnicos</strong>
+
           <p>Documentação completa para regularização e certificação de instalações elétricas.</p>
+
         </li>
+
       </ul>
 
+
+
       <div style="text-align: center; margin-top: 40px;">
+
         <a href="#contato" class="cta-button">Solicitar Orçamento</a>
+
       </div>
+
     </section>
+
+
 
     <section id="sobre">
+
       <h2>Sobre Nós</h2>
+
       <p>A Engenhan é uma empresa especializada em engenharia elétrica e automação industrial, com sede em Porto Alegre/RS. Combinamos conhecimento técnico avançado com soluções práticas para atender residências, comércios e indústrias.</p>
-      <p>Nossa equipe possui mais de 15 anos de experiência no mercado, com certificações em:</p>
+
+
+      <p>Nossa equipe possui mais de 1o anos de experiência no mercado, com certificações em:</p>
+
+
+      <p>Nossa equipe possui mais de 10 anos de experiência no mercado, com certificações em:</p>
+
       <ul style="margin: 15px 0 15px 20px; color: #444;">
+
         <li>NR-10 - Segurança em Instalações Elétricas</li>
-        <li>Automação Industrial - Siemens e Rockwell</li>
-        <li>Projetos de Eficiência Energética - PROCEL</li>
+
+        <li>Automação Industrial - Siemens </li>
+
+        <li>Projetos de Eficiência Energética </li>
+
       </ul>
+
       <p>Valorizamos a transparência, o atendimento personalizado e a entrega de resultados mensuráveis para nossos clientes.</p>
+
     </section>
 
-    <!-- NOVA SEÇÃO DE PORTFÓLIO COM GALERIA -->
+
+
     <section id="portfolio">
+
       <h2>Portfólio</h2>
-      <h3>Conheça nossos projetos realizados</h3>
-      
-      <div class="portfolio-gallery">
-        <!-- Projeto 1 - Substitua a imagem e texto -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="projeto-residencial.jpg" alt="Instalação elétrica residencial" loading="lazy">
-            <div class="project-overlay">
-              <h4>Residencial</h4>
-              <button class="view-project">Ver detalhes</button>
-            </div>
-          </div>
-          <div class="project-info">
-            <h4>Instalação Residencial</h4>
-            <p>Projeto completo com padrão de excelência em condomínio de luxo.</p>
-            <div class="project-details">
-              <span><strong>Área:</strong> 320m²</span>
-              <span><strong>Tempo:</strong> 3 semanas</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Projeto 2 - Substitua a imagem e texto -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="projeto-industrial.jpg" alt="Automação industrial" loading="lazy">
-            <div class="project-overlay">
-              <h4>Industrial</h4>
-              <button class="view-project">Ver detalhes</button>
-            </div>
-          </div>
-          <div class="project-info">
-            <h4>Automação Industrial</h4>
-            <p>Modernização de linha de produção com redução de 25% no tempo.</p>
-            <div class="project-details">
-              <span><strong>Cliente:</strong> Indústria Metalúrgica</span>
-              <span><strong>Local:</strong> Canoas/RS</span>
-            </div>
-          </div>
-        </div>
+      <h3>Alguns de nossos projetos recentes</h3>
 
-        <!-- Projeto 3 - Substitua a imagem e texto -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="projeto-eficiencia.jpg" alt="Eficiência energética" loading="lazy">
-            <div class="project-overlay">
-              <h4>Eficiência</h4>
-              <button class="view-project">Ver detalhes</button>
-            </div>
-          </div>
-          <div class="project-info">
-            <h4>Eficiência Energética</h4>
-            <p>Redução de 32% no consumo energético através de otimizações.</p>
-            <div class="project-details">
-              <span><strong>Economia:</strong> R$ 8.200/mês</span>
-              <span><strong>Retorno:</strong> 14 meses</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Projeto 4 - Substitua a imagem e texto -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="projeto-laudo.jpg" alt="Laudo técnico" loading="lazy">
-            <div class="project-overlay">
-              <h4>Laudo Técnico</h4>
-              <button class="view-project">Ver detalhes</button>
-            </div>
+
+      <ul>
+
+        <li>
+
+          <img src="projeto1.jpg" alt="Projeto elétrico completo para edifício residencial de alto padrão em Porto Alegre" loading="lazy" width="400" height="200" />
+
+          <div class="portfolio-info">
+
+            <strong>Residencial Alto Padrão</strong>
+
+            <p>Projeto elétrico completo com sistema de automação residencial integrado.</p>
+
+            <a href="#detalhes-projeto1">Ver detalhes →</a>
+
           </div>
-          <div class="project-info">
-            <h4>Laudo Técnico</h4>
-            <p>Regularização de instalações elétricas para shopping center.</p>
-            <div class="project-details">
-              <span><strong>Área:</strong> 12.000m²</span>
-              <span><strong>Normas:</strong> NR10 e ABNT</span>
-            </div>
+
+        </li>
+
+        <li>
+
+          <img src="projeto2.jpg" alt="Sistema de automação para linha de produção industrial em Esteio/RS" loading="lazy" width="400" height="200" />
+
+          <div class="portfolio-info">
+
+            <strong>Automação Industrial</strong>
+
+            <p>Modernização de linha de produção com redução de 25% no tempo de ciclo.</p>
+
+            <a href="#detalhes-projeto2">Ver estudo de caso →</a>
+
           </div>
-        </div>
+
+        </li>
+
+        <li>
+
+          <img src="projeto3.jpg" alt="Consultoria em eficiência energética para shopping center em Canoas" loading="lazy" width="400" height="200" />
+
+          <div class="portfolio-info">
+
+            <strong>Eficiência Energética</strong>
+
+            <p>Redução de 32% no consumo energético anual através de otimizações.</p>
+
+            <a href="#detalhes-projeto3">Ver resultados →</a>
+
+          </div>
+
+        </li>
+
+      </ul>
+
+
+
+      <div style="text-align: center; margin-top: 30px;">
+
+        <a href="#contato" class="cta-button secondary">Fale sobre seu projeto</a>
+
       </div>
 
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="#contato" class="cta-button secondary">Quero um projeto como esses</a>
-      </div>
     </section>
+
+
 
     <section id="contato">
+
       <h2>Entre em Contato</h2>
+
       <p>Estamos prontos para transformar suas necessidades em soluções técnicas eficientes.</p>
-      
+
+
+
       <div class="contato-grid">
+
         <div>
+
           <div class="contato-info">
+
             <h3>Atendimento</h3>
+
             <p>Segunda a Sexta: 8h às 18h</p>
+
             <p>Sábado: 9h às 12h</p>
+
           </div>
-          
+
+
+
           <div class="contato-info">
+
             <h3>Contato Direto</h3>
+
             <p><a href="mailto:atendimento@engenhan.com.br">atendimento@engenhan.com.br</a></p>
+
             <p><a href="tel:+5551981532804">(51) 98153-2804</a></p>
+
           </div>
+
         </div>
-        
+
+
+
         <div>
+
           <div class="contato-info">
+
             <h3>Endereço</h3>
-            <p>Av. Exemplo, 123 - Sala 501</p>
-            <p>Bairro Centro - Porto Alegre/RS</p>
-            <p>CEP: 90000-000</p>
+
+           <p>Porto Alegre/RS</p>
+
           </div>
-          
+
+
+
           <div style="margin-top: 20px;">
+
             <a href="https://api.whatsapp.com/send?phone=5551981532804" class="cta-button" style="background-color: #25d366; display: inline-flex; align-items: center; gap: 8px;">
+
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="white">
+
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+
               </svg>
+
               WhatsApp
+
             </a>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+
+
   <footer>
+
     <div class="footer-content">
+
       <div class="footer-column">
+
         <h3>Engenhan</h3>
+
         <p>Soluções completas em engenharia elétrica e automação industrial desde 2010.</p>
+
       </div>
-      
+
+
+
       <div class="footer-column">
+
         <h3>Links Rápidos</h3>
+
         <ul>
+
           <li><a href="#servicos">Serviços</a></li>
+
           <li><a href="#portfolio">Portfólio</a></li>
+
           <li><a href="#contato">Orçamento</a></li>
+
         </ul>
+
       </div>
-      
+
+
+
       <div class="footer-column">
+
         <h3>Contato</h3>
+
         <ul>
+
           <li><a href="mailto:atendimento@engenhan.com.br">Email</a></li>
+
           <li><a href="tel:+5551981532804">Telefone</a></li>
+
           <li><a href="https://maps.google.com">Localização</a></li>
+
         </ul>
+
       </div>
+
     </div>
-    
+
+
+
     <div class="copyright">
+
       <p>© 2025 Engenhan - Todos os direitos reservados. CREA-RS 123456</p>
+
     </div>
+
   </footer>
 
+
+
   <a href="https://api.whatsapp.com/send?phone=5551981532804" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="white">
+
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+
     </svg>
+
   </a>
+
 </body>
+
 </html>
