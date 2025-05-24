@@ -32,6 +32,27 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
 
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Engenhan",
+    "url": "https://engenhan.com.br",
+    "logo": "https://engenhan.com.br/logo.png",
+    "image": "https://engenhan.com.br/logo.png",
+    "email": "atendimento@engenhan.com.br",
+    "telephone": "+55-51-98153-2804",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Porto Alegre",
+      "addressRegion": "RS",
+      "addressCountry": "BR"
+    },
+    "description": "Engenhan oferece soluções em engenharia elétrica, automação industrial, eficiência energética e projetos elétricos."
+  }
+  </script>
+
   <style>
     * {
       box-sizing: border-box;
@@ -84,7 +105,7 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 15px;
+      padding: 12px 15px;
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
@@ -214,6 +235,7 @@
 <main>
   <section id="servicos">
     <h2>Serviços</h2>
+    <h3>Principais soluções oferecidas</h3>
     <ul>
       <li>Projetos de instalações elétricas residenciais e comerciais</li>
       <li>Laudos técnicos e perícias</li>
@@ -231,19 +253,19 @@
     <h2>Portfólio</h2>
     <ul>
       <li>
-        <img src="projeto1.png" alt="Projeto 1 - Instalação residencial"  />
+        <img src="projeto1.png" alt="Projeto elétrico residencial moderno com foco em eficiência energética" loading="lazy" />
         <strong>Projeto</strong> Instalação elétrica residencial moderna e eficiente.
       </li>
       <li>
-        <img src="projeto 2.png" alt="Projeto 2 - Automação industrial" />
+        <img src="projeto 2.png" alt="Projeto de automação industrial para linha de produção" loading="lazy" />
         <strong>Projeto</strong> Automação e controle para linha de produção industrial.
       </li>
       <li>
-        <img src="projeto 3.png" alt="Projeto 3 - Laudo técnico" />
+        <img src="projeto 3.png" alt="Laudo técnico para inspeção elétrica" loading="lazy" />
         <strong>Projeto</strong> Laudo técnico para inspeção e certificação elétrica.
       </li>
       <li>
-        <img src="projeto 4.png" alt="Projeto 4 - Consultoria energética" />
+        <img src="projeto 4.png" alt="Consultoria em eficiência energética industrial" loading="lazy" />
         <strong>Projeto</strong> Consultoria em eficiência energética para indústria.
       </li>
     </ul>
@@ -264,6 +286,7 @@
     href="https://api.whatsapp.com/send?phone=5551981532804&text=Olá,%20gostaria%20de%20mais%20informações" 
     target="_blank" 
     rel="noopener noreferrer"
+    aria-label="Conversar no WhatsApp"
     style="
       position: fixed;
       bottom: 20px;
@@ -287,7 +310,6 @@
       style="width: 32px; height: 32px;" 
     />
   </a>
-
 
 </body>
 </html>
