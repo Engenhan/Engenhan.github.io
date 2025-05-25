@@ -155,42 +155,68 @@
       gap: 30px;
     }
     
-    .service-card {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-      position: relative;
-      height: 250px;
-      cursor: pointer;
-      border-left: 4px solid #005bbb;
-    }
-    
-    .service-card:hover {
-      transform: rotateY(180deg);
-    }
-    
-    .service-card h3, .service-card p {
-      backface-visibility: hidden;
-      position: relative;
-    }
-    
-    .service-card h3 {
-      font-family: 'Montserrat', sans-serif;
-      color: #002e5d;
-      margin-bottom: 15px;
-      transition: all 0.3s;
-    }
-    
-    .service-card p {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      right: 30px;
-      transform: rotateY(180deg);
-    }
+   .service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 250px;
+  cursor: pointer;
+  border-left: 4px solid #005bbb;
+}
+
+/* Frente do card (conteúdo principal) */
+.service-card-front, .service-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Para Safari */
+}
+
+.service-card-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+/* Verso do card (conteúdo que aparece no hover) */
+.service-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: rotateY(180deg);
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  .service-card {
+    height: auto;
+    transform-style: flat;
+  }
+  
+  .service-card-front, .service-card-back {
+    position: relative;
+    transform: none !important;
+    padding: 20px;
+  }
+  
+  .service-card-back {
+    display: none; /* Opcional: esconde o verso em mobile */
+  }
+  
+  .service-card:hover {
+    transform: none !important;
+  }
+}
     
     /* Seção Portfólio */
     #portfolio {
@@ -475,23 +501,34 @@
         <h2>Nossos Serviços</h2>
       </div>
       
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Projetos Elétricos</h3>
-          <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
-        </div>
-        
-        <div class="service-card">
-          <h3>Automação Industrial</h3>
-          <p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
-        </div>
-        
-        <div class="service-card">
-          <h3>Eficiência Energética</h3>
-          <p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
-        </div>
-      </div>
+    <div class="services-grid">
+  <div class="service-card">
+    <div class="service-card-front">
+      <h3>Projetos Elétricos</h3>
     </div>
+    <div class="service-card-back">
+      <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
+    </div>
+  </div>
+  
+  <div class="service-card">
+    <div class="service-card-front">
+      <h3>Automação Industrial</h3>
+    </div>
+    <div class="service-card-back">
+      <p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
+    </div>
+  </div>
+  
+  <div class="service-card">
+    <div class="service-card-front">
+      <h3>Eficiência Energética</h3>
+    </div>
+    <div class="service-card-back">
+      <p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
+    </div>
+  </div>
+</div>
   </section>
 
   <!-- Portfólio -->
