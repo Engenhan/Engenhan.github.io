@@ -28,7 +28,7 @@ font-family: 'Roboto', sans-serif;
 background: #f9fafb;
 color: #222;
 line-height: 1.6;
-overflow-x: hidden;
+      overflow-x: hidden;
 }
 
 .container {
@@ -104,26 +104,26 @@ margin-top: 60px;
 font-family: 'Montserrat', sans-serif;
 font-size: 2.5rem;
 margin-bottom: 20px;
-text-shadow: 
-0 1px 0 #ccc, 
-0 2px 0 #b3b3b3,
-0 3px 0 #999,
-0 4px 0 #808080,
-0 5px 0 #666,
-0 6px 5px rgba(0,0,0,0.3);
-animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-10px); }
+      text-shadow: 
+        0 1px 0 #ccc, 
+        0 2px 0 #b3b3b3,
+        0 3px 0 #999,
+        0 4px 0 #808080,
+        0 5px 0 #666,
+        0 6px 5px rgba(0,0,0,0.3);
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
 }
 
 /* Seção Serviços */
 #servicos {
 padding: 80px 0;
-position: relative;
-z-index: 1;
+      position: relative;
+      z-index: 1;
 }
 
 .section-title {
@@ -155,32 +155,35 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 gap: 30px;
 }
 
-    .service-card {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.service-card {
+background: white;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s;
       transition: transform 0.6s;
       transform-style: preserve-3d;
       position: relative;
       height: 250px;
       cursor: pointer;
-      border-left: 4px solid #005bbb;
-    }
-    
-    .service-card:hover {
+border-left: 4px solid #005bbb;
+}
+
+.service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
       transform: rotateY(180deg);
     }
     
     .service-card h3, .service-card p {
       backface-visibility: hidden;
       position: relative;
-    }
-    
-    .service-card h3 {
-      font-family: 'Montserrat', sans-serif;
-      color: #002e5d;
-      margin-bottom: 15px;
+}
+
+.service-card h3 {
+font-family: 'Montserrat', sans-serif;
+color: #002e5d;
+margin-bottom: 15px;
       transition: all 0.3s;
     }
     
@@ -190,76 +193,15 @@ gap: 30px;
       left: 30px;
       right: 30px;
       transform: rotateY(180deg);
-    }
-   .service-card {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-  height: 250px;
-  cursor: pointer;
-  border-left: 4px solid #005bbb;
 }
 
-/* Frente do card (conteúdo principal) */
-.service-card-front, .service-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding: 30px;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* Para Safari */
-}
-
-.service-card-front {
-  transform: rotateY(0deg);
-  z-index: 2;
-}
-
-/* Verso do card (conteúdo que aparece no hover) */
-.service-card-back {
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-}
-
-.service-card:hover {
-  transform: rotateY(180deg);
-}
-
-/* Ajuste para mobile */
-@media (max-width: 768px) {
-  .service-card {
-    height: auto;
-    transform-style: flat;
-  }
-  
-  .service-card-front, .service-card-back {
-    position: relative;
-    transform: none !important;
-    padding: 20px;
-  }
-  
-  .service-card-back {
-    display: none; /* Opcional: esconde o verso em mobile */
-  }
-  
-  .service-card:hover {
-    transform: none !important;
-  }
-}
-
-/* Seção Portfólio */
+    /* Seção Portfólio - NOVO ESTILO */
+    /* Seção Portfólio */
 #portfolio {
 padding: 80px 0;
 background: #f0f4f8;
-position: relative;
-z-index: 1;
+      position: relative;
+      z-index: 1;
 }
 
 .project-filter {
@@ -278,19 +220,19 @@ border-radius: 30px;
 font-weight: 600;
 cursor: pointer;
 transition: all 0.3s;
-transform: translateZ(0);
-box-shadow: 
-0 2px 4px rgba(0,0,0,0.1),
-0 4px 8px rgba(0,0,0,0.1);
+      transform: translateZ(0);
+      box-shadow: 
+        0 2px 4px rgba(0,0,0,0.1),
+        0 4px 8px rgba(0,0,0,0.1);
 }
 
 .filter-btn.active, .filter-btn:hover {
 background: #005bbb;
 color: white;
-transform: translateY(-3px) translateZ(10px);
-box-shadow: 
-0 5px 10px rgba(0,0,0,0.2),
-0 8px 16px rgba(0,0,0,0.2);
+      transform: translateY(-3px) translateZ(10px);
+      box-shadow: 
+        0 5px 10px rgba(0,0,0,0.2),
+        0 8px 16px rgba(0,0,0,0.2);
 }
 
 .projects-grid {
@@ -384,8 +326,8 @@ color: #002e5d;
 /* Seção Contato */
 #contato {
 padding: 80px 0;
-position: relative;
-z-index: 1;
+      position: relative;
+      z-index: 1;
 }
 
 .contact-grid {
@@ -434,8 +376,8 @@ background: #002e5d;
 color: white;
 padding: 40px 0;
 text-align: center;
-position: relative;
-z-index: 1;
+      position: relative;
+      z-index: 1;
 }
 
 .footer-links {
@@ -464,11 +406,11 @@ align-items: center;
 justify-content: center;
 box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 z-index: 100;
-transition: transform 0.3s;
-}
-
-.whatsapp-float:hover {
-transform: scale(1.1) rotate(10deg);
+      transition: transform 0.3s;
+    }
+    
+    .whatsapp-float:hover {
+      transform: scale(1.1) rotate(10deg);
 }
 
 /* Responsivo */
@@ -486,23 +428,23 @@ justify-content: center;
 .projects-grid {
 grid-template-columns: 1fr;
 }
-
-.service-card {
-height: auto;
-}
-
-.service-card p {
-position: static;
-transform: none;
-margin-top: 15px;
-}
+      
+      .service-card {
+        height: auto;
+      }
+      
+      .service-card p {
+        position: static;
+        transform: none;
+        margin-top: 15px;
+      }
 }
 </style>
 </head>
 
 <body>
-<!-- Background 3D Interativo -->
-<canvas id="3d-background" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; opacity:0.1;"></canvas>
+  <!-- Background 3D Interativo -->
+  <canvas id="3d-background" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; opacity:0.1;"></canvas>
 
 <!-- Header -->
 <header>
@@ -537,53 +479,27 @@ margin-top: 15px;
 <h2>Nossos Serviços</h2>
 </div>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Projetos Elétricos</h3>
-          <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
-        </div>
-        
-        <div class="service-card">
-          <h3>Automação Industrial</h3>
-          <p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
-        </div>
-        
-        <div class="service-card">
-          <h3>Eficiência Energética</h3>
-          <p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
-        </div>
-      </div>
-    <div class="services-grid">
-  <div class="service-card">
-    <div class="service-card-front">
-      <h3>Projetos Elétricos</h3>
-    </div>
-    <div class="service-card-back">
-      <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
-    </div>
-  </div>
-  
-  <div class="service-card">
-    <div class="service-card-front">
-      <h3>Automação Industrial</h3>
-    </div>
-    <div class="service-card-back">
-      <p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
-    </div>
-  </div>
-  
-  <div class="service-card">
-    <div class="service-card-front">
-      <h3>Eficiência Energética</h3>
-    </div>
-    <div class="service-card-back">
-      <p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
+<div class="services-grid">
+<div class="service-card">
+<h3>Projetos Elétricos</h3>
+<p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
 </div>
-  </div>
+
+<div class="service-card">
+<h3>Automação Industrial</h3>
+<p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
+</div>
+
+<div class="service-card">
+<h3>Eficiência Energética</h3>
+<p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
+</div>
+</div>
 </div>
 </section>
 
-<!-- Portfólio -->
+  <!-- Portfólio - Nova Versão -->
+  <!-- Portfólio -->
 <section id="portfolio">
 <div class="container">
 <div class="section-title">
@@ -706,59 +622,72 @@ margin-top: 15px;
 // Filtro de Projetos
 document.querySelectorAll('.filter-btn').forEach(btn => {
 btn.addEventListener('click', () => {
-document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        // Remove active de todos os botões
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('active');
+        });
+        
+        // Adiciona active no clicado
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
 btn.classList.add('active');
 
 const filter = btn.dataset.filter;
+        
+        // Filtra os projetos
 document.querySelectorAll('.project-item').forEach(item => {
-item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+          item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
 });
 });
 });
 
-// Background 3D Interativo
-const canvas = document.getElementById('3d-background');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+    // Background 3D Interativo
+    const canvas = document.getElementById('3d-background');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-const particles = [];
-for (let i = 0; i < 50; i++) {
-particles.push({
-x: Math.random() * canvas.width,
-y: Math.random() * canvas.height,
-size: Math.random() * 3 + 1,
-speedX: Math.random() * 0.5 - 0.25,
-speedY: Math.random() * 0.5 - 0.25
-});
-}
+    const particles = [];
+    for (let i = 0; i < 50; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 3 + 1,
+        speedX: Math.random() * 0.5 - 0.25,
+        speedY: Math.random() * 0.5 - 0.25
+      });
+    }
 
-function animate() {
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-ctx.fillStyle = '#005bbb';
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#005bbb';
+      
+      particles.forEach(p => {
+        p.x += p.speedX;
+        p.y += p.speedY;
+        
+        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+        
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
 
-particles.forEach(p => {
-p.x += p.speedX;
-p.y += p.speedY;
-
-if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
-if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
-
-ctx.beginPath();
-ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-ctx.fill();
-});
-
-requestAnimationFrame(animate);
-}
-
-animate();
-
-// Redimensionar canvas
-window.addEventListener('resize', () => {
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-});
+    // Redimensionar canvas
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
 </script>
 </body>
 </html>
