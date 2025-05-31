@@ -16,6 +16,83 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
+  .hero-button {
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  animation: fadeInDown 1s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  color: #f0f0f0;
+  animation: fadeInUp 1.3s ease;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffcc00;
+  color: #002e5d;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+  animation: fadeInUp 1.8s ease;
+}
+
+.hero-button:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+    .hero-button {
+display: inline-block;
+background-color: #ffcc00;
+color: #002e5d;
+font-weight: bold;
+padding: 14px 28px;
+border-radius: 6px;
+text-decoration: none;
+font-size: 1rem;
+transition: background 0.3s, transform 0.3s;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+animation: fadeInUp 2s ease;
+}
+
+.hero-button:hover {
+background-color: #e6b800;
+transform: scale(1.05);
+}
+
 /* Reset e Estilos Gerais */
 * {
 box-sizing: border-box;
@@ -182,9 +259,9 @@ transform-style: flat;
 }
 
 .service-card-front svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+display: block;
+width: 100%;
+height: 100%;
 }
 
 
@@ -466,54 +543,66 @@ margin-top: 15px;
 </div>
 </header>
 
-<!-- Hero Section -->
-<section id="hero">
+<!-- Hero Section Moderna com Botão -->
+<section id="hero" style="background: linear-gradient(rgba(0,46,93,0.85), rgba(0,46,93,0.85)), url('bg-engenharia.jpg'); background-size: cover; background-position: center; padding: 160px 20px 140px; text-align: center; color: white;">
+<!-- Hero Section Refinado -->
+<section id="hero" style="background: linear-gradient(rgba(0, 46, 93, 0.85), rgba(0, 46, 93, 0.85)), url('bg-engenharia.jpg'); background-size: cover; background-position: center; padding: 180px 20px 140px; text-align: center; color: white;">
 <div class="container">
-<h2>Soluções em Engenharia Elétrica e Automação</h2>
-<p>Projetos personalizados com excelência técnica e inovação</p>
+    <h2 style="font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 20px; animation: fadeInDown 1s ease;">Soluções em Engenharia Elétrica e Automação</h2>
+    <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; animation: fadeInUp 1.5s ease;">Projetos personalizados com excelência técnica e inovação</p>
+    
+    <a href="#contato" class="hero-button">Solicitar Orçamento</a>
+    <h2 class="hero-title">Soluções em Engenharia Elétrica e Automação</h2>
+    <p class="hero-subtitle">Projetos personalizados com excelência técnica e inovação</p>
+    <a href="#contato" class="hero-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#002e5d" viewBox="0 0 24 24" style="margin-right: 10px;"><path d="M2 3h20a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H6l-4 4V4a1 1 0 0 1 1-1z"/></svg>
+      Solicitar Orçamento
+    </a>
+</div>
 </section>
+
 
 <!-- Serviços -->
 <section id="servicos" style="padding: 80px 0; background: #f9fafb;">
-  <div class="container">
-    <div class="section-title" style="text-align: center; margin-bottom: 60px;">
-  <h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.4rem; color: #002e5d; position: relative; display: inline-block; padding-bottom: 20px;">
-    Nossos Serviços
-    <span style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: #005bbb; border-radius: 2px;"></span>
-  </h2>
+<div class="container">
+<div class="section-title" style="text-align: center; margin-bottom: 60px;">
+<h2 style="font-family: 'Montserrat', sans-serif; font-size: 2.4rem; color: #002e5d; position: relative; display: inline-block; padding-bottom: 20px;">
+Nossos Serviços
+<span style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background-color: #005bbb; border-radius: 2px;"></span>
+</h2>
 </div>
 
-    <div class="services-grid">
+<div class="services-grid">
 
-      <!-- Projetos Elétricos -->
-      <div class="service-card" style="text-align: center;">
-        <div style="margin-bottom: 20px;">
-          <img src="https://img.icons8.com/?size=100&id=6703&format=png&color=000000" alt="Ícone de Raio" width="60" height="60" style="display: inline-block;">
-        </div>
-        <h3>Projetos Elétricos</h3>
-        <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
-      </div>
-
-     <!-- Automação Industrial -->
+<!-- Projetos Elétricos -->
 <div class="service-card" style="text-align: center;">
-  <div style="margin-bottom: 20px;">
-    <img src="https://img.icons8.com/?size=100&id=1570&format=png&color=000000" alt="Ícone de Engrenagem" width="60" height="60" style="display: inline-block;">
-  </div>
-  <h3>Automação Industrial</h3>
-  <p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
+<div style="margin-bottom: 20px;">
+<img src="https://img.icons8.com/?size=100&id=6703&format=png&color=000000" alt="Ícone de Raio" width="60" height="60" style="display: inline-block;">
+</div>
+<h3>Projetos Elétricos</h3>
+<p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
 </div>
 
-      <!-- Eficiência Energética -->
-      <div class="service-card" style="text-align: center;">
-        <div style="margin-bottom: 20px;">
-          <img src="https://img.icons8.com/?size=100&id=20401&format=png&color=000000" alt="Ícone de Lâmpada" width="60" height="60" style="display: inline-block;">
-        </div>
-        <h3>Eficiência Energética</h3>
-        <p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
-      </div>
+<!-- Automação Industrial -->
+<div class="service-card" style="text-align: center;">
+<div style="margin-bottom: 20px;">
+<img src="https://img.icons8.com/?size=100&id=1570&format=png&color=000000" alt="Ícone de Engrenagem" width="60" height="60" style="display: inline-block;">
+</div>
+<h3>Automação Industrial</h3>
+<p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
+</div>
 
-    </div>
-  </div>
+<!-- Eficiência Energética -->
+<div class="service-card" style="text-align: center;">
+<div style="margin-bottom: 20px;">
+<img src="https://img.icons8.com/?size=100&id=20401&format=png&color=000000" alt="Ícone de Lâmpada" width="60" height="60" style="display: inline-block;">
+</div>
+<h3>Eficiência Energética</h3>
+<p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- Portfólio -->
