@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Engenhan - Engenharia Elétrica</title>
+
   <!-- Ícones FontAwesome -->
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     rel="stylesheet"
   />
+
   <style>
     body {
       margin: 0;
@@ -41,15 +43,6 @@
       text-decoration: underline;
     }
 
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-
-    /* Seção de serviços */
     #servicos {
       padding: 60px 20px;
       background: #f9f9f9;
@@ -60,6 +53,14 @@
       font-size: 2.8rem;
       margin-bottom: 40px;
       color: #003366;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .service-card {
@@ -77,4 +78,53 @@
       min-height: 220px;
     }
 
-    .service-card:hov
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card-front i {
+      font-size: 42px;
+      color: #005bbb;
+      margin-bottom: 12px;
+    }
+
+    .service-card-front h3 {
+      font-size: 1.6rem;
+      color: #003366;
+      margin: 0;
+    }
+
+    .service-card-back {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .service-card {
+        padding: 25px 15px;
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Engenhan</h1>
+    <p>Engenharia Elétrica e Automação</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a hre
