@@ -155,67 +155,103 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 gap: 30px;
 }
 
-.service-card {
-background: white;
-padding: 30px;
-border-radius: 8px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-transition: transform 0.6s;
-transform-style: preserve-3d;
-position: relative;
-height: 250px;
-cursor: pointer;
-border-left: 4px solid #005bbb;
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+      height: 250px;
+      cursor: pointer;
+      border-left: 4px solid #005bbb;
+    }
+    
+    .service-card:hover {
+      transform: rotateY(180deg);
+    }
+    
+    .service-card h3, .service-card p {
+      backface-visibility: hidden;
+      position: relative;
+    }
+    
+    .service-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #002e5d;
+      margin-bottom: 15px;
+      transition: all 0.3s;
+    }
+    
+    .service-card p {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      right: 30px;
+      transform: rotateY(180deg);
+    }
+   .service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 250px;
+  cursor: pointer;
+  border-left: 4px solid #005bbb;
 }
 
 /* Frente do card (conteúdo principal) */
 .service-card-front, .service-card-back {
-position: absolute;
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-padding: 30px;
-backface-visibility: hidden;
--webkit-backface-visibility: hidden; /* Para Safari */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Para Safari */
 }
 
 .service-card-front {
-transform: rotateY(0deg);
-z-index: 2;
+  transform: rotateY(0deg);
+  z-index: 2;
 }
 
 /* Verso do card (conteúdo que aparece no hover) */
 .service-card-back {
-transform: rotateY(180deg);
-display: flex;
-align-items: center;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
 }
 
 .service-card:hover {
-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* Ajuste para mobile */
 @media (max-width: 768px) {
-.service-card {
-height: auto;
-transform-style: flat;
-}
-
-.service-card-front, .service-card-back {
-position: relative;
-transform: none !important;
-padding: 20px;
-}
-
-.service-card-back {
-display: none; /* Opcional: esconde o verso em mobile */
-}
-
-.service-card:hover {
-transform: none !important;
-}
+  .service-card {
+    height: auto;
+    transform-style: flat;
+  }
+  
+  .service-card-front, .service-card-back {
+    position: relative;
+    transform: none !important;
+    padding: 20px;
+  }
+  
+  .service-card-back {
+    display: none; /* Opcional: esconde o verso em mobile */
+  }
+  
+  .service-card:hover {
+    transform: none !important;
+  }
 }
 
 /* Seção Portfólio */
@@ -473,7 +509,7 @@ margin-top: 15px;
 <div class="container header-container">
 <div class="logo">
 <img src="logo.png" alt="Engenhan Engenharia">
-<h1>Engenhan Engenharia Elétrica e Automação</h1>
+<h1>Engenhan</h1>
 </div>
 
 <nav>
@@ -501,33 +537,49 @@ margin-top: 15px;
 <h2>Nossos Serviços</h2>
 </div>
 
-<div class="services-grid">
-<div class="service-card">
-<div class="service-card-front">
-<h3>Projetos Elétricos</h3>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Projetos Elétricos</h3>
+          <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Automação Industrial</h3>
+          <p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Eficiência Energética</h3>
+          <p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
+        </div>
+      </div>
+    <div class="services-grid">
+  <div class="service-card">
+    <div class="service-card-front">
+      <h3>Projetos Elétricos</h3>
+    </div>
+    <div class="service-card-back">
+      <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
+    </div>
+  </div>
+  
+  <div class="service-card">
+    <div class="service-card-front">
+      <h3>Automação Industrial</h3>
+    </div>
+    <div class="service-card-back">
+      <p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
+    </div>
+  </div>
+  
+  <div class="service-card">
+    <div class="service-card-front">
+      <h3>Eficiência Energética</h3>
+    </div>
+    <div class="service-card-back">
+      <p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
 </div>
-<div class="service-card-back">
-<p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
-</div>
-</div>
-
-<div class="service-card">
-<div class="service-card-front">
-<h3>Automação Industrial</h3>
-</div>
-<div class="service-card-back">
-<p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
-</div>
-</div>
-
-<div class="service-card">
-<div class="service-card-front">
-<h3>Eficiência Energética</h3>
-</div>
-<div class="service-card-back">
-<p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
-</div>
-</div>
+  </div>
 </div>
 </section>
 
@@ -549,7 +601,7 @@ margin-top: 15px;
 <!-- Projeto 1 -->
 <div class="project-item industrial" data-category="industrial">
 <div class="project-img">
-<img src="projeto 2.png" alt="Automação industrial" loading="lazy">
+<img src="projeto-industrial-1.jpg" alt="Automação industrial" loading="lazy">
 <div class="project-overlay">
 <div class="project-info">
 <h3>Automação Industrial</h3>
@@ -559,45 +611,44 @@ margin-top: 15px;
 </div>
 </div>
 <div class="project-meta">
-            <span class="project-category">Automatomação</span>
-            <span class="project-category">Automação</span>
-<h3 class="project-title"> </h3>
+<span class="project-category">Industrial</span>
+<h3 class="project-title">Planta Industrial - Esteio/RS</h3>
 </div>
 </div>
 
 <!-- Projeto 2 -->
 <div class="project-item residencial" data-category="residencial">
 <div class="project-img">
-<img src="projeto 4.png" alt="Instalação elétrica residencial" loading="lazy">
+<img src="projeto-residencial-1.jpg" alt="Instalação elétrica residencial" loading="lazy">
 <div class="project-overlay">
 <div class="project-info">
 <h3>Instalação Residencial</h3>
-<p></p>
+<p>Projeto completo em condomínio de luxo</p>
 <a href="#" class="project-link">Ver detalhes</a>
 </div>
 </div>
 </div>
 <div class="project-meta">
-<span class="project-category">industrial</span>
-<h3 class="project-title"></h3>
+<span class="project-category">Residencial</span>
+<h3 class="project-title">Residência Alto Padrão - Porto Alegre</h3>
 </div>
 </div>
 
 <!-- Projeto 3 -->
 <div class="project-item comercial" data-category="comercial">
 <div class="project-img">
-<img src="projeto1.png" alt="Projeto elétrico comercial" loading="lazy">
+<img src="projeto-comercial-1.jpg" alt="Projeto elétrico comercial" loading="lazy">
 <div class="project-overlay">
 <div class="project-info">
 <h3>Projeto Comercial</h3>
-<p></p>
+<p>Shopping Center - Sistema completo</p>
 <a href="#" class="project-link">Ver detalhes</a>
 </div>
 </div>
 </div>
 <div class="project-meta">
 <span class="project-category">Comercial</span>
-<h3 class="project-title"></h3>
+<h3 class="project-title">Shopping Center - Canoas/RS</h3>
 </div>
 </div>
 </div>
