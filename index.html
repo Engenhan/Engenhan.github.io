@@ -295,4 +295,57 @@ nav a:hover {
 <section id="portfolio">
   <div class="container">
     <div class="section-title">
-      <h2>
+      <h2>Portfólio</h2>
+    </div>
+
+    <!-- Portfólio items aqui -->
+
+  </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" style="padding: 60px 20px; background: #002e5d; color: white; text-align: center;">
+  <div class="container">
+    <h2>Fale Conosco</h2>
+    <p>Email: contato@engenhan.com.br | Telefone: (51) 99999-9999</p>
+    <p>Rua Exemplo, 123, Porto Alegre, RS</p>
+  </div>
+</section>
+
+<!-- WhatsApp Flutuante -->
+<a href="https://wa.me/5551999999999" target="_blank" style="position:fixed; bottom:20px; right:20px; background:#25d366; color:white; border-radius:50%; width:60px; height:60px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:1000; font-size:28px;">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+// Exemplo simples para fundo 3D interativo (pode substituir por sua implementação atual)
+const canvas = document.getElementById('3d-background');
+const ctx = canvas.getContext('2d');
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+// Animação simples - só para efeito visual suave
+let angle = 0;
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+  ctx.strokeStyle = 'rgba(0,46,93,0.1)';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  for(let i=0; i<10; i++) {
+    const r = 50 + i*30;
+    ctx.ellipse(cx, cy, r, r/2, angle + i*0.2, 0, Math.PI * 2);
+  }
+  ctx.stroke();
+  angle += 0.005;
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
