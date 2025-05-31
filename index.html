@@ -1,328 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Engenhan - Engenharia Elétrica e Automação Industrial | Porto Alegre</title>
-
-<!-- SEO -->
-<meta name="description" content="Projetos elétricos, automação industrial e eficiência energética em Porto Alegre. Soluções completas em engenharia elétrica."/>
-<meta name="keywords" content="projetos elétricos, automação industrial, eficiência energética, laudos técnicos, Engenhan"/>
-
-<!-- Favicon -->
-<link rel="icon" href="favicon.png" type="image/png">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-<style>
-/* Reset e Estilos Gerais */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #f9fafb;
-  color: #222;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #002e5d;
-  color: white;
-  padding: 15px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo img {
-  height: 125px;
-}
-
-.logo h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.4rem;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 15px;
-  border-radius: 4px;
-  transition: all 0.3s;
-}
-
-nav a:hover {
-  background: #005bbb;
-}
-
-/* Seção Hero */
-#hero {
-  background: linear-gradient(rgba(0,46,93,0.8), rgba(0,46,93,0.8)), url('bg-engenharia.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 150px 20px 100px;
-  margin-top: 60px;
-}
-
-#hero h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-shadow: 
-    0 1px 0 #ccc, 
-    0 2px 0 #b3b3b3,
-    0 3px 0 #999,
-    0 4px 0 #808080,
-    0 5px 0 #666,
-    0 6px 5px rgba(0,0,0,0.3);
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* Seção Serviços */
-#servicos {
-  padding: 80px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-title h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  color: #002e5d;
-  position: relative;
-  display: inline-block;
-}
-
-.section-title h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #005bbb;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  border-left: 6px solid #005bbb;
-  position: relative;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* Ajuste para mobile */
-@media (max-width: 768px) {
-  .service-card {
-    height: auto;
-    transform-style: flat;
-  }
-
-  .service-card-front, .service-card-back {
-    position: relative;
-    transform: none !important;
-    padding: 20px;
-  }
-
-  .service-card-back {
-    display: none; /* Opcional: esconde o verso em mobile */
-  }
-
-  .service-card:hover {
-    transform: none !important;
-  }
-}
-
-/* Seção Portfólio */
-#portfolio {
-  padding: 80px 0;
-  background: #f0f4f8;
-  position: relative;
-  z-index: 1;
-}
-
-.project-filter {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 40px;
-}
-
-.filter-btn {
-  padding: 10px 20px;
-  background: #e9ecef;
-  border: none;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-  transform: translateZ(0);
-  box-shadow: 
-    0 2px 4px rgba(0,0,0,0.1),
-    0 4px 8px rgba(0,0,0,0.1);
-}
-
-.filter-btn.active, .filter-btn:hover {
-  background: #005bbb;
-  color: white;
-  transform: translateY(-3px) translateZ(10px);
-  box-shadow: 
-    0 5px 10px rgba(0,0,0,0.2),
-    0 8px 16px rgba(0,0,0,0.2);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-}
-
-.project-item {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-
-.project-item:hover {
-  transform: translateY(-10px);
-}
-
-.project-img {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-}
-
-.project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;
-}
-
-.project-item:hover .project-img img {
-  transform: scale(1.05);
-}
-
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,46,93,0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.project-item:hover .project-overlay {
-  opacity: 1;
-}
-
-.project-info {
-  text-align: center;
-  color: white;
-  padding: 20px;
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 8px 20px;
-  background: #005bbb;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.project-meta {
-  padding: 20px;
-}
-
-.project-category {
-  display: inline-block;
-  background: #f0f4f8;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  margin-bottom: 10px;
-}
-
-.project-title {
-  font-size: 1.2rem;
-  color: #002e5d;
-}
+<!-- ...parte anterior do código continua igual até #contato -->
 
 /* Seção Contato */
 #contato {
@@ -340,4 +16,162 @@ nav a:hover {
 .contact-info h3 {
   font-family: 'Montserrat', sans-serif;
   color: #002e5d;
-  margin-bottom: 20
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #002e5d;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-form button {
+  background: #005bbb;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #003f8a;
+}
+
+/* Footer */
+footer {
+  background: #002e5d;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Corrigindo altura fixa no header para evitar sobreposição */
+body {
+  padding-top: 80px; /* deixa espaço para header fixo */
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-container">
+    <div class="logo">
+      <img src="logo.png" alt="Engenhan logo" />
+      <h1>Engenhan</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="hero">
+  <h2>Engenharia Elétrica e Automação Industrial em Porto Alegre</h2>
+</section>
+
+<section id="servicos" class="container">
+  <div class="section-title">
+    <h2>Serviços</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Projetos Elétricos</h3>
+      <p>Desenvolvimento completo de projetos elétricos para indústrias e residências.</p>
+    </div>
+    <div class="service-card">
+      <h3>Automação Industrial</h3>
+      <p>Implementação de sistemas automatizados para otimizar processos produtivos.</p>
+    </div>
+    <div class="service-card">
+      <h3>Laudos Técnicos</h3>
+      <p>Emissão de laudos técnicos para conformidade e segurança elétrica.</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="container">
+  <div class="section-title">
+    <h2>Portfólio</h2>
+  </div>
+  <div class="projects-grid">
+    <!-- exemplo de projeto -->
+    <div class="project-item">
+      <div class="project-img">
+        <img src="projeto1.jpg" alt="Projeto 1" />
+      </div>
+      <div class="project-meta">
+        <span class="project-category">Projeto Elétrico</span>
+        <h3 class="project-title">Sistema de Iluminação Industrial</h3>
+      </div>
+    </div>
+    <!-- mais projetos aqui -->
+  </div>
+</section>
+
+<section id="contato" class="container">
+  <div class="section-title">
+    <h2>Contato</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Entre em contato</h3>
+      <p>Email: contato@engenhan.com.br</p>
+      <p>Telefone: (51) 99999-9999</p>
+      <p>Endereço: Porto Alegre, RS</p>
+    </div>
+    <form class="contact-form" action="#" method="POST">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Engenhan - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
