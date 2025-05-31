@@ -1,712 +1,107 @@
- <!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Engenhan - Engenharia Elétrica e Automação Industrial | Porto Alegre</title>
-
-<!-- SEO -->
-<meta name="description" content="Projetos elétricos, automação industrial e eficiência energética em Porto Alegre. Soluções completas em engenharia elétrica."/>
-<meta name="keywords" content="projetos elétricos, automação industrial, eficiência energética, laudos técnicos, Engenhan"/>
-
-<!-- Favicon -->
-<link rel="icon" href="favicon.png" type="image/png">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-<style>
-/* Reset e Estilos Gerais */
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
-body {
-font-family: 'Roboto', sans-serif;
-background: #f9fafb;
-color: #222;
-line-height: 1.6;
-overflow-x: hidden;
-}
-
-.container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
-}
-
-/* Header */
-header {
-position: fixed;
-top: 0;
-width: 100%;
-background: #002e5d;
-color: white;
-padding: 15px 0;
-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-z-index: 1000;
-}
-
-.header-container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.logo {
-display: flex;
-align-items: center;
-gap: 15px;
-}
-
-.logo img {
-height: 125px;
-}
-
-.logo h1 {
-font-family: 'Montserrat', sans-serif;
-font-size: 1.4rem;
-}
-
-nav ul {
-display: flex;
-gap: 20px;
-list-style: none;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-font-weight: 600;
-padding: 8px 15px;
-border-radius: 4px;
-transition: all 0.3s;
-}
-
-nav a:hover {
-background: #005bbb;
-}
-
-/* Seção Hero */
-#hero {
-background: linear-gradient(rgba(0,46,93,0.8), rgba(0,46,93,0.8)), url('bg-engenharia.jpg');
-background-size: cover;
-background-position: center;
-color: white;
-text-align: center;
-padding: 150px 20px 100px;
-margin-top: 60px;
-}
-
-#hero h2 {
-font-family: 'Montserrat', sans-serif;
-font-size: 2.5rem;
-margin-bottom: 20px;
-text-shadow: 
-0 1px 0 #ccc, 
-0 2px 0 #b3b3b3,
-0 3px 0 #999,
-0 4px 0 #808080,
-0 5px 0 #666,
-0 6px 5px rgba(0,0,0,0.3);
-animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-10px); }
-}
-
-/* Seção Serviços */
-#servicos {
-padding: 80px 0;
-position: relative;
-z-index: 1;
-}
-
-.section-title {
-text-align: center;
-margin-bottom: 50px;
-}
-
-.section-title h2 {
-font-family: 'Montserrat', sans-serif;
-font-size: 2rem;
-color: #002e5d;
-position: relative;
-display: inline-block;
-}
-
-.section-title h2::after {
-content: '';
-position: absolute;
-bottom: -10px;
-left: 0;
-width: 100%;
-height: 4px;
-background: #005bbb;
-}
-
-.services-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-}
-
-.service-card {
-background: white;
-padding: 30px;
-border-radius: 8px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-transition: transform 0.6s;
-transform-style: preserve-3d;
-position: relative;
-height: 250px;
-cursor: pointer;
-border-left: 4px solid #005bbb;
-}
-
-/* Frente do card (conteúdo principal) */
-.service-card-front, .service-card-back {
-position: absolute;
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-padding: 30px;
-backface-visibility: hidden;
--webkit-backface-visibility: hidden; /* Para Safari */
-}
-
-.service-card-front {
-transform: rotateY(0deg);
-z-index: 2;
-}
-
-/* Verso do card (conteúdo que aparece no hover) */
-.service-card-back {
-transform: rotateY(180deg);
-display: flex;
-align-items: center;
-}
-
-.service-card:hover {
-transform: rotateY(180deg);
-}
-
-/* Ajuste para mobile */
-@media (max-width: 768px) {
-.service-card {
-height: auto;
-transform-style: flat;
-}
-
-.service-card-front, .service-card-back {
-position: relative;
-transform: none !important;
-padding: 20px;
-}
-
-.service-card-back {
-display: none; /* Opcional: esconde o verso em mobile */
-}
-
-.service-card:hover {
-transform: none !important;
-}
-}
-
-/* Seção Portfólio */
-#portfolio {
-padding: 80px 0;
-background: #f0f4f8;
-position: relative;
-z-index: 1;
-}
-
-.project-filter {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 10px;
-margin-bottom: 40px;
-}
-
-.filter-btn {
-padding: 10px 20px;
-background: #e9ecef;
-border: none;
-border-radius: 30px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.3s;
-transform: translateZ(0);
-box-shadow: 
-0 2px 4px rgba(0,0,0,0.1),
-0 4px 8px rgba(0,0,0,0.1);
-}
-
-.filter-btn.active, .filter-btn:hover {
-background: #005bbb;
-color: white;
-transform: translateY(-3px) translateZ(10px);
-box-shadow: 
-0 5px 10px rgba(0,0,0,0.2),
-0 8px 16px rgba(0,0,0,0.2);
-}
-
-.projects-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-gap: 30px;
-}
-
-.project-item {
-background: white;
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-transition: transform 0.3s;
-}
-
-.project-item:hover {
-transform: translateY(-10px);
-}
-
-.project-img {
-position: relative;
-height: 250px;
-overflow: hidden;
-}
-
-.project-img img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.5s;
-}
-
-.project-item:hover .project-img img {
-transform: scale(1.05);
-}
-
-.project-overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0,46,93,0.85);
-display: flex;
-align-items: center;
-justify-content: center;
-opacity: 0;
-transition: opacity 0.3s;
-}
-
-.project-item:hover .project-overlay {
-opacity: 1;
-}
-
-.project-info {
-text-align: center;
-color: white;
-padding: 20px;
-}
-
-.project-link {
-display: inline-block;
-margin-top: 15px;
-padding: 8px 20px;
-background: #005bbb;
-color: white;
-border-radius: 4px;
-text-decoration: none;
-font-weight: 600;
-}
-
-.project-meta {
-padding: 20px;
-}
-
-.project-category {
-display: inline-block;
-background: #f0f4f8;
-padding: 4px 12px;
-border-radius: 4px;
-font-size: 0.8rem;
-margin-bottom: 10px;
-}
-
-.project-title {
-font-size: 1.2rem;
-color: #002e5d;
-}
-
-/* Seção Contato */
-#contato {
-padding: 80px 0;
-position: relative;
-z-index: 1;
-}
-
-.contact-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 40px;
-}
-
-.contact-info h3 {
-font-family: 'Montserrat', sans-serif;
-color: #002e5d;
-margin-bottom: 20px;
-}
-
-.contact-info p {
-margin-bottom: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-width: 100%;
-padding: 12px;
-margin-bottom: 15px;
-border: 1px solid #ddd;
-border-radius: 4px;
-}
-
-.contact-form button {
-background: #005bbb;
-color: white;
-border: none;
-padding: 12px 25px;
-border-radius: 4px;
-cursor: pointer;
-font-weight: 600;
-transition: background 0.3s;
-}
-
-.contact-form button:hover {
-background: #003d7a;
-}
-
-/* Footer */
-footer {
-background: #002e5d;
-color: white;
-padding: 40px 0;
-text-align: center;
-position: relative;
-z-index: 1;
-}
-
-.footer-links {
-display: flex;
-justify-content: center;
-gap: 20px;
-margin-bottom: 20px;
-}
-
-.footer-links a {
-color: white;
-text-decoration: none;
-}
-
-/* WhatsApp */
-.whatsapp-float {
-position: fixed;
-bottom: 30px;
-right: 30px;
-background: #25d366;
-width: 60px;
-height: 60px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-z-index: 100;
-transition: transform 0.3s;
-}
-
-.whatsapp-float:hover {
-transform: scale(1.1) rotate(10deg);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-.header-container {
-flex-direction: column;
-gap: 15px;
-}
-
-nav ul {
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.projects-grid {
-grid-template-columns: 1fr;
-}
-
-.service-card {
-height: auto;
-}
-
-.service-card p {
-position: static;
-transform: none;
-margin-top: 15px;
-}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio com Filtro</title>
+  <style>
+    /* Estilos básicos para o filtro */
+    .filter-btn {
+      cursor: pointer;
+      padding: 8px 16px;
+      margin: 0 4px;
+      background-color: #eee;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .project-item {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+    /* WhatsApp flutuante */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+    .whatsapp-float svg {
+      fill: white;
+      width: 32px;
+      height: 32px;
+    }
+  </style>
 </head>
-
 <body>
-<!-- Background 3D Interativo -->
-<canvas id="3d-background" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; opacity:0.1;"></canvas>
 
-<!-- Header -->
-<header>
-<div class="container header-container">
-<div class="logo">
-<img src="logo.png" alt="Engenhan Engenharia">
-<h1>Engenhan Engenharia Elétrica e Automação</h1>
-</div>
+  <h1>Meu Portfólio</h1>
 
-<nav>
-<ul>
-<li><a href="#servicos">Serviços</a></li>
-<li><a href="#portfolio">Portfólio</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-</nav>
-</div>
-</header>
+  <div id="filter-buttons">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn" data-filter="design">Design</button>
+  </div>
 
-<!-- Hero Section -->
-<section id="hero">
-<div class="container">
-<h2>Soluções em Engenharia Elétrica e Automação</h2>
-<p>Projetos personalizados com excelência técnica e inovação</p>
-</div>
-</section>
+  <div id="projects">
+    <div class="project-item" data-category="web">Projeto Web 1</div>
+    <div class="project-item" data-category="mobile">Projeto Mobile 1</div>
+    <div class="project-item" data-category="design">Projeto Design 1</div>
+    <div class="project-item" data-category="web">Projeto Web 2</div>
+    <div class="project-item" data-category="mobile">Projeto Mobile 2</div>
+    <div class="project-item" data-category="design">Projeto Design 2</div>
+  </div>
 
-<!-- Serviços -->
-<section id="servicos">
-<div class="container">
-<div class="section-title">
-<h2>Nossos Serviços</h2>
-</div>
+  <!-- Botão WhatsApp fixo -->
+  <a href="https://wa.me/5551981532804" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.9 11.9 0 0012 0a11.89 11.89 0 00-8.45 3.48A11.86 11.86 0 000 12a11.91 11.91 0 003.48 8.45A11.86 11.86 0 0012 24a11.9 11.9 0 008.52-3.48A11.89 11.89 0 0024 12a11.91 11.91 0 00-3.48-8.52zm-7.47 17.07a9.31 9.31 0 01-5.02-1.44l-.36-.22-3.05.81.82-3.02-.23-.36a9.27 9.27 0 011.39-12.67 9.26 9.26 0 0112.62 1.39 9.3 9.3 0 01-8.97 15.51zm5.7-7.92c-.31-.15-1.83-.9-2.11-1- .28-.11-.48-.15-.68.15s-.78 1- .95 1.21-.35.22-.65.07a7.55 7.55 0 01-2.23-1.37 8.4 8.4 0 01-1.56-1.93c-.16-.28 0-.43.13-.58.14-.15.31-.4.47-.59.15-.18.2-.31.3-.52s.05-.37-.02-.52c-.07-.15-.68-1.64-.94-2.26s-.48-.52-.65-.53-.37-.01-.56-.01-.52.07-.79.37a3.24 3.24 0 00-1 1.25 4.37 4.37 0 00-.44 1.22c0 .21-.04.42.02.61s.16.44.34.68a4.63 4.63 0 001.37 1.5 8.2 8.2 0 002.5 1.5c.33.14.58.21.78.34s.33.26.49.5a3.3 3.3 0 001.3 1.2 3.2 3.2 0 001.43.42c.28 0 .55-.02.75-.04s.68-.27.77-.52a1.44 1.44 0 00.08-.49c0-.16-.02-.3-.33-.45z"/>
+    </svg>
+  </a>
 
-<div class="services-grid">
-<div class="service-card">
-<div class="service-card-front">
-<h3>Projetos Elétricos</h3>
-</div>
-<div class="service-card-back">
-<p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
-</div>
-</div>
+  <script>
+    // Filtro de Projetos
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove a classe active de todos os botões
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        // Adiciona active no botão clicado
+        btn.classList.add('active');
 
-<div class="service-card">
-<div class="service-card-front">
-<h3>Automação Industrial</h3>
-</div>
-<div class="service-card-back">
-<p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
-</div>
-</div>
+        const filter = btn.dataset.filter;
+        const projects = document.querySelectorAll('.project-item');
 
-<div class="service-card">
-<div class="service-card-front">
-<h3>Eficiência Energética</h3>
-</div>
-<div class="service-card-back">
-<p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Portfólio -->
-<section id="portfolio">
-<div class="container">
-<div class="section-title">
-<h2>Nosso Portfólio</h2>
-</div>
-
-<div class="project-filter">
-<button class="filter-btn active" data-filter="all">Todos</button>
-<button class="filter-btn" data-filter="residencial">Residencial</button>
-<button class="filter-btn" data-filter="industrial">Industrial</button>
-<button class="filter-btn" data-filter="comercial">Comercial</button>
-</div>
-
-<div class="projects-grid">
-<!-- Projeto 1 -->
-<div class="project-item industrial" data-category="industrial">
-<div class="project-img">
-<img src="projeto 2.png" alt="Automação industrial" loading="lazy">
-<div class="project-overlay">
-<div class="project-info">
-<h3>Automação Industrial</h3>
-<p>Sistema completo para linha de produção</p>
-<a href="#" class="project-link">Ver detalhes</a>
-</div>
-</div>
-</div>
-<div class="project-meta">
-                   <span class="project-category">Automação</span>
-<h3 class="project-title"> </h3>
-</div>
-</div>
-
-<!-- Projeto 2 -->
-<div class="project-item residencial" data-category="residencial">
-<div class="project-img">
-<img src="projeto 4.png" alt="Instalação elétrica residencial" loading="lazy">
-<div class="project-overlay">
-<div class="project-info">
-<h3>Instalação Residencial</h3>
-<p></p>
-<a href="#" class="project-link">Ver detalhes</a>
-</div>
-</div>
-</div>
-<div class="project-meta">
-<span class="project-category">industrial</span>
-<h3 class="project-title"></h3>
-</div>
-</div>
-
-<!-- Projeto 3 -->
-<div class="project-item comercial" data-category="comercial">
-<div class="project-img">
-<img src="projeto1.png" alt="Projeto elétrico comercial" loading="lazy">
-<div class="project-overlay">
-<div class="project-info">
-<h3>Projeto Comercial</h3>
-<p></p>
-<a href="#" class="project-link">Ver detalhes</a>
-</div>
-</div>
-</div>
-<div class="project-meta">
-<span class="project-category">Comercial</span>
-<h3 class="project-title"></h3>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Contato -->
-<section id="contato">
-<div class="container">
-<div class="section-title">
-<h2>Entre em Contato</h2>
-</div>
-
-<div class="contact-grid">
-<div class="contact-info">
-<h3>Informações</h3>
-<p><strong>Email:</strong> contato@engenhan.com.br</p>
-<p><strong>Telefone:</strong> (51) 98153-2804</p>
-<p><strong>Endereço:</strong> Porto Alegre/RS</p>
-</div>
-
-<div class="contact-form">
-<form>
-<input type="text" placeholder="Seu nome" required>
-<input type="email" placeholder="Seu email" required>
-<input type="tel" placeholder="Seu telefone">
-<textarea placeholder="Sua mensagem" rows="5" required></textarea>
-<button type="submit">Enviar Mensagem</button>
-</form>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Footer -->
-<footer>
-<div class="container">
-<div class="footer-links">
-<a href="#servicos">Serviços</a>
-<a href="#portfolio">Portfólio</a>
-<a href="#contato">Contato</a>
-</div>
-<p>&copy; 2023 Engenhan - Todos os direitos reservados</p>
-</div>
-</footer>
-
-<!-- WhatsApp -->
-<a href="https://wa.me/5551981532804" class="whatsapp-float" target="_blank">
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
-<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-</svg>
-</a>
-
-<script>
-// Filtro de Projetos
-document.querySelectorAll('.filter-btn').forEach(btn => {
-btn.addEventListener('click', () => {
-document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-btn.classList.add('active');
-
-const filter = btn.dataset.filter;
-document.querySelectorAll('.project-item').forEach(item => {
-item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
-});
-});
-});
-
-// Background 3D Interativo
-const canvas = document.getElementById('3d-background');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const particles = [];
-for (let i = 0; i < 50; i++) {
-particles.push({
-x: Math.random() * canvas.width,
-y: Math.random() * canvas.height,
-size: Math.random() * 3 + 1,
-speedX: Math.random() * 0.5 - 0.25,
-speedY: Math.random() * 0.5 - 0.25
-});
-}
-
-function animate() {
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-ctx.fillStyle = '#005bbb';
-
-particles.forEach(p => {
-p.x += p.speedX;
-p.y += p.speedY;
-
-if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
-if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
-
-ctx.beginPath();
-ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-ctx.fill();
-});
-
-requestAnimationFrame(animate);
-}
-
-animate();
-
-// Redimensionar canvas
-window.addEventListener('resize', () => {
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-});
-</script>
+        projects.forEach(project => {
+          // Se filtro for "all", mostra todos, senão só os que baterem com o data-category
+          if (filter === 'all' || project.dataset.category === filter) {
+            project.style.display = 'block';
+          } else {
+            project.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
