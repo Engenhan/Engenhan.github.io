@@ -1,100 +1,99 @@
-<!-- Inclua isso no <head> para usar ícones FontAwesome -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  rel="stylesheet"
-/>
-
-<section id="servicos" style="padding: 60px 20px; background: #f9f9f9;">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 40px; color: #003366;">
-      Serviços
-    </h2>
-
-    <div
-      style="
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-      "
-    >
-      <div class="service-card">
-        <div class="service-card-front">
-          <i class="fas fa-bolt"></i>
-          <h3>Projetos Elétricos</h3>
-        </div>
-        <div class="service-card-back">
-          Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-front">
-          <i class="fas fa-cogs"></i>
-          <h3>Automação Industrial</h3>
-        </div>
-        <div class="service-card-back">
-          Soluções em automação para otimizar processos industriais, com integração de sistemas e controle avançado.
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-card-front">
-          <i class="fas fa-lightbulb"></i>
-          <h3>Consultoria Técnica</h3>
-        </div>
-        <div class="service-card-back">
-          Assessoria especializada para análise, diagnóstico e melhoria de sistemas elétricos e automação.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .service-card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
-    border-left: 6px solid #005bbb;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    min-height: 220px;
-  }
-
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .service-card-front i {
-    font-size: 42px;
-    color: #005bbb;
-    margin-bottom: 12px;
-  }
-
-  .service-card-front h3 {
-    font-size: 1.6rem;
-    color: #003366;
-    margin: 0;
-  }
-
-  .service-card-back {
-    margin-top: 15px;
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.5;
-  }
-
-  /* Responsividade */
-  @media (max-width: 600px) {
-    .service-card {
-      padding: 25px 15px;
-      min-height: auto;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engenhan - Engenharia Elétrica</title>
+  <!-- Ícones FontAwesome -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
     }
-  }
-</style>
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005bbb;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    /* Estilos da seção de serviços */
+    #servicos {
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+
+    #servicos h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      color: #003366;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      border-left: 6px solid #005bbb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 220px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card-front i {
+      font-size: 42px;
+      color: #005bbb;
+      margin-bottom: 12px;
+    }
+
+    .service-card-front h3 {
+      font-size: 1.6rem;
+      color: #003366;
+      margin: 0;
+    }
+
+    .service-card-back {
+      margin-top: 15px;
+      font-size: 1rem;
