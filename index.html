@@ -156,29 +156,44 @@ gap: 30px;
 }
 
 .service-card {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  border-left: 6px solid #005bbb;
-  position: relative;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+background: white;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+border-left: 6px solid #005bbb;
+position: relative;
+height: 250px;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+transform: translateY(-8px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 /* Ajuste para mobile */
 @media (max-width: 768px) {
 .service-card {
 height: auto;
 transform-style: flat;
+}
+
+.service-card-front, .service-card-back {
+position: relative;
+transform: none !important;
+padding: 20px;
+}
+
+.service-card-back {
+display: none; /* Opcional: esconde o verso em mobile */
+}
+
+.service-card:hover {
+transform: none !important;
+}
 }
 
 .service-card-back
@@ -479,13 +494,9 @@ margin-top: 15px;
 <div class="service-card-front">
 <h3>Automação Industrial</h3>
 </div>
-<div class="service-card">
-  <div class="service-card-front">
-    <h3>Projetos Elétricos</h3>
-  </div>
-  <div class="service-card-back">
-    <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
-  </div>
+<div class="service-card-back">
+<p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
+</div>
 </div>
 
 <div class="service-card">
@@ -527,7 +538,7 @@ margin-top: 15px;
 </div>
 </div>
 <div class="project-meta">
-                   <span class="project-category">Automação</span>
+<span class="project-category">Automação</span>
 <h3 class="project-title"> </h3>
 </div>
 </div>
