@@ -4,107 +4,298 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Engenhan - Engenharia Elétrica e Automação Industrial | Porto Alegre</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
-</head>
-<body>
 
-<!-- Header -->
-<header>
-  <div>
-    <div class="logo">
-      <img src="logo.png" alt="Engenhan Engenharia" />
-      <h1>Engenhan Engenharia Elétrica e Automação</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- SEO -->
+  <meta name="description" content="Projetos elétricos, automação industrial e eficiência energética em Porto Alegre. Soluções completas em engenharia elétrica."/>
+  <meta name="keywords" content="projetos elétricos, automação industrial, eficiência energética, laudos técnicos, Engenhan"/>
 
-<!-- Hero Section -->
-<section id="hero" style="background: url('bg-engenharia.jpg') center / cover no-repeat; color: white; text-align: center; padding: 180px 20px 140px;">
-  <div>
-    <h2>Soluções em Engenharia Elétrica e Automação</h2>
-    <p>Projetos personalizados com excelência técnica e inovação</p>
-    <a href="#contato" style="background:#ffcc00; color:#002e5d; padding:14px 28px; border-radius:8px; text-decoration:none; font-weight:bold; display:inline-flex; align-items:center; gap:10px;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#002e5d" viewBox="0 0 24 24"><path d="M2 3h20a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H6l-4 4V4a1 1 0 0 1 1-1z"/></svg>
-      Solicitar Orçamento
-    </a>
-  </div>
-</section>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
 
-<!-- Serviços -->
-<section id="servicos" style="padding: 80px 0; background: #f9fafb;">
-  <div>
-    <h2>Nossos Serviços</h2>
-    <div>
-      <div>
-        <img src="https://img.icons8.com/?size=100&id=6703&format=png&color=000000" alt="Ícone de Raio" width="60" height="60" />
-        <h3>Projetos Elétricos</h3>
-        <p>Desenvolvimento completo de projetos elétricos residenciais, comerciais e industriais, atendendo às normas técnicas.</p>
-      </div>
-      <div>
-        <img src="https://img.icons8.com/?size=100&id=1570&format=png&color=000000" alt="Ícone de Engrenagem" width="60" height="60" />
-        <h3>Automação Industrial</h3>
-        <p>Sistemas de controle e monitoramento para aumento de produtividade e redução de custos operacionais.</p>
-      </div>
-      <div>
-        <img src="https://img.icons8.com/?size=100&id=20401&format=png&color=000000" alt="Ícone de Lâmpada" width="60" height="60" />
-        <h3>Eficiência Energética</h3>
-        <p>Diagnósticos e soluções personalizadas para redução de consumo energético e otimização de sistemas.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- Portfólio -->
-<section id="portfolio" style="padding: 80px 0; background: #f0f4f8;">
-  <div>
-    <h2>Nosso Portfólio</h2>
-    <div>
-      <button data-filter="all">Todos</button>
-      <button data-filter="residencial">Residencial</button>
-      <button data-filter="industrial">Industrial</button>
-      <button data-filter="comercial">Comercial</button>
-    </div>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <div>
-      <!-- Projeto 1 -->
-      <div data-category="industrial">
-        <img src="projeto 2.png" alt="Automação industrial" loading="lazy" />
-        <h3>Automação Industrial</h3>
-        <p>Sistema completo para linha de produção</p>
-        <a href="#">Ver detalhes</a>
-      </div>
+  <style>
+    /* Reset e Estilos Gerais */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      <!-- Projeto 2 -->
-      <div data-category="residencial">
-        <img src="projeto 4.png" alt="Instalação elétrica residencial" loading="lazy" />
-        <h3>Instalação Residencial</h3>
-        <a href="#">Ver detalhes</a>
-      </div>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f9fafb;
+      color: #222;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-      <!-- Projeto 3 -->
-      <div data-category="comercial">
-        <img src="projeto1.png" alt="Projeto elétrico comercial" loading="lazy" />
-        <h3>Projeto Comercial</h3>
-        <a href="#">Ver detalhes</a>
-      </div>
-    </div>
-  </div>
-</section>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-<!-- Contato -->
-<section id="contato" style="padding: 80px 20px;">
-  <div>
-    <h2>Contato</h2>
-    <!-- Coloque aqui seu formulário ou informações de contato -->
-  </div>
-</section>
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #002e5d;
+      color: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
 
-</body>
-</html>
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      height: 125px;
+    }
+
+    .logo h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background: #005bbb;
+    }
+
+    /* Seção Hero */
+    #hero {
+      background: linear-gradient(rgba(0,46,93,0.85), rgba(0,46,93,0.85)), url('bg-engenharia.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 180px 20px 140px;
+      margin-top: 60px;
+    }
+
+    .hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      max-width: 720px;
+      margin: 0 auto 40px;
+      color: #f0f0f0;
+      animation: fadeInUp 1.3s ease;
+    }
+
+    .hero-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #ffcc00;
+      color: #002e5d;
+      font-weight: bold;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s, transform 0.3s;
+      animation: fadeInUp 1.8s ease;
+    }
+
+    .hero-button:hover {
+      background-color: #e6b800;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Seção Serviços */
+    #servicos {
+      padding: 80px 0;
+      background: #f9fafb;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #002e5d;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #005bbb;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-left: 6px solid #005bbb;
+      position: relative;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .service-card {
+        height: auto;
+        transform-style: flat;
+      }
+      .service-card:hover {
+        transform: none !important;
+      }
+    }
+
+    /* Seção Portfólio */
+    #portfolio {
+      padding: 80px 0;
+      background: #f0f4f8;
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-filter {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      background: #e9ecef;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      transform: translateZ(0);
+      box-shadow: 
+        0 2px 4px rgba(0,0,0,0.1),
+        0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: #005bbb;
+      color: white;
+      transform: translateY(-3px) translateZ(10px);
+      box-shadow: 
+        0 5px 10px rgba(0,0,0,0.2),
+        0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .project-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .project-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-img {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .project-item
