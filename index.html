@@ -298,4 +298,67 @@
       transition: transform 0.5s;
     }
 
-    .project-item
+    .project-item:hover .project-img img {
+      transform: scale(1.05);
+    }
+
+    .project-info {
+      padding: 18px 24px;
+    }
+
+    .project-category {
+      font-weight: 700;
+      color: #005bbb;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .project-name {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #222;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Footer */
+    footer {
+      background: #002e5d;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-container">
+      <a href="#hero" class="logo" aria-label="Engenhan - Engenharia Elétrica e Automação Industrial">
+        <img src="engenhan.png" alt="Logotipo Engenhan" />
+        <h1>Engenhan</h1>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" aria-label="Apresentação principal">
+    <h2 class="hero-title" data-aos="fade-down">Engenharia elétrica e automação industrial</h2>
+    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="150">
+      A melhor empresa de projetos, laudos, automação industrial, eficiência energética e muito mais, no Rio Grande do Sul.
+    </p>
+    <a href="#contato" class="hero-button" aria-label="Solicitar orçamento">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" style="width: 24px; height: 24px;" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17 10.5V6c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v4.5H5.5L12 17l6.5
