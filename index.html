@@ -1,6 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engenhan Engenharia Elétrica e Automação | Porto Alegre</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Projetos elétricos, automação industrial e eficiência energética em Porto Alegre. Soluções completas em engenharia elétrica.">
+  <meta name="keywords" content="engenharia elétrica, automação industrial, projetos elétricos, eficiência energética, Engenhan, Porto Alegre">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilo -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header img {
+      width: 100px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 24px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    .servico, .projeto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .item {
+      flex: 1 1 300px;
+      background: #e9f0f8;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .item img {
+      max-width: 80px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contato p {
+      margin: 10px 0;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    form button:hover {
+      background: #0055aa;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      z-index: 999;
+    }
+  </style>
   <!-- No <head> -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <!-- No final do <body> -->
@@ -527,6 +655,84 @@ margin-top: 15px;
 </head>
 
 <body>
+  <header>
+    <img src="logo.png" alt="Logo Engenhan">
+    <h1>Engenhan Engenharia Elétrica e Automação</h1>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="hero" style="text-align:center; background:#e0edf7;">
+    <h2>Soluções completas em Engenharia Elétrica</h2>
+    <p>Projetos, automação e eficiência energética com foco em resultados.</p>
+    <a href="#contato" style="display:inline-block; background:#003366; color:white; padding:10px 20px; border-radius:5px; margin-top:10px;">Solicitar Orçamento</a>
+  </section>
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="servico">
+      <div class="item">
+        <img src="https://img.icons8.com/?size=100&id=6703&format=png&color=000000" alt="Projetos Elétricos">
+        <h3>Projetos Elétricos</h3>
+        <p>Projetos completos residenciais, comerciais e industriais, com foco em segurança e eficiência.</p>
+      </div>
+      <div class="item">
+        <img src="https://img.icons8.com/?size=100&id=1570&format=png&color=000000" alt="Automação Industrial">
+        <h3>Automação Industrial</h3>
+        <p>Automatize processos e aumente a produtividade da sua indústria com nossas soluções.</p>
+      </div>
+      <div class="item">
+        <img src="https://img.icons8.com/?size=100&id=20401&format=png&color=000000" alt="Eficiência Energética">
+        <h3>Eficiência Energética</h3>
+        <p>Reduza custos com energia com soluções sob medida e consultoria especializada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfólio de Projetos</h2>
+    <div class="projeto">
+      <div class="item">
+        <img src="projeto1.png" alt="Projeto Comercial">
+        <h3>Projeto Comercial</h3>
+        <p>Execução de instalações elétricas para ambientes corporativos e lojas.</p>
+      </div>
+      <div class="item">
+        <img src="projeto 4.png" alt="Projeto Residencial">
+        <h3>Instalação Residencial</h3>
+        <p>Elétrica de casas e apartamentos com padrão de segurança e qualidade.</p>
+      </div>
+      <div class="item">
+        <img src="projeto 2.png" alt="Automação Industrial">
+        <h3>Automação Industrial</h3>
+        <p>Controle de processos industriais com CLPs e sistemas supervisórios.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>Email: atendimento@engenhan.com.br</p>
+    <p>Telefone: (51) 98153-2804</p>
+    <p>Endereço: Porto Alegre/RS</p>
+
+    <form>
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu email" required>
+      <input type="tel" placeholder="Seu telefone">
+      <textarea rows="4" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Engenhan - Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/5551981532804" target="_blank" class="whatsapp-float">
+    💬
+  </a>
 <!-- Background 3D Interativo -->
 <canvas id="3d-background" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; opacity:0.1;"></canvas>
 
